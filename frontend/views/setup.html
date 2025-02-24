@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Detección</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/L_Siembra/frontend/assets/css/setup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Configuración de Detección</h1>
+        
+        <div class="setup-options">
+            <!-- Opción Aster -->
+            <div class="option-box" data-type="aster">
+                <div class="icon">🌸</div>
+                <h3>Aster</h3>
+                <p>Rendimiento: 25/hora</p>
+            </div>
+            
+            <!-- Opción Pompón -->
+            <div class="option-box" data-type="pompon">
+                <div class="icon">🌺</div>
+                <h3>Pompón</h3>
+                <p>Rendimiento: 29/hora</p>
+            </div>
+            
+            <!-- Opción Mixto -->
+            <div class="option-box" data-type="mixed">
+                <div class="icon">🌷</div>
+                <h3>Mixto</h3>
+                <p>Configuración personalizada</p>
+                <div class="mixed-selection" style="display: none;">
+                    <div class="person-pool">
+                        <h4>Personas disponibles:</h4>
+                        <div class="available-persons"></div>
+                    </div>
+                    <div class="category-assignments">
+                        <div class="category-box">
+                            <div class="category-header">
+                                <h4>Aster (25/hora)</h4>
+                                <div class="category-count aster-count">0 personas</div>
+                            </div>
+                            <div class="category-dropzone" data-category="aster"></div>
+                        </div>
+                        <div class="category-box">
+                            <div class="category-header">
+                                <h4>Pompón (29/hora)</h4>
+                                <div class="category-count pompon-count">0 personas</div>
+                            </div>
+                            <div class="category-dropzone" data-category="pompon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button id="startButton" disabled>
+                Comenzar Detección
+            </button>
+        </div>
+        <p class="info-text" id="status-message">Seleccione el tipo de detección</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/L_Siembra/frontend/assets/js/setup.js"></script>
+</body>
+</html>

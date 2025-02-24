@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Clases</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/L_Siembra/frontend/assets/css/class_management.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Clases y Nombres</h1>
+        
+        <div class="management-area">
+            <!-- Panel de Nombres Disponibles -->
+            <div class="section">
+                <h2>Nombres Disponibles</h2>
+                <div class="names-pool" id="namesPool">
+                    <!-- Los nombres se agregarán aquí dinámicamente -->
+                </div>
+                <div class="error-message" id="errorMessage"></div>
+                <div class="add-name-section">
+                    <h3>Agregar Nuevo Nombre</h3>
+                    <form id="addNameForm" class="add-name-form">
+                        <input type="text" 
+                               id="newName" 
+                               placeholder="Ingrese el nombre completo" 
+                               required>
+                        <button type="submit" class="btn-primary">Agregar</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Panel de Clases -->
+            <div class="section">
+                <h2>Clases</h2>
+                <div class="classes-grid" id="classesGrid">
+                    <!-- Las clases se generarán aquí dinámicamente -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botones de Acción -->
+        <div class="button-container">
+            <button id="saveChanges" class="btn-primary">
+                Guardar Cambios
+            </button>
+            <button id="continueSetup" class="btn-secondary">
+                Continuar Configuración
+            </button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/L_Siembra/frontend/assets/js/class_management.js"></script>
+</body>
+</html>

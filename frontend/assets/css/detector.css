@@ -1,0 +1,277 @@
+:root {
+    --color-primary: #002060;
+    --color-secondary: #EC6F17;
+    --color-accent: #FBBC05;
+    --color-tertiary: #025E73;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--color-primary);
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    max-width: 1200px;
+    width: 95%;
+    margin: 20px;
+}
+
+.container > * + * {
+    margin-top: 2rem;
+}
+
+h1 {
+    color: var(--color-primary);
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+}
+
+button {
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    min-height: 60px;
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#startDetection {
+    background-color: var(--color-secondary);
+}
+
+#startDetection:not(:disabled):hover {
+    background-color: #d65c0d;
+    transform: translateY(-2px);
+}
+
+#pauseDetection {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+#resumeDetection {
+    background-color: var(--color-secondary);
+}
+
+#stopDetection {
+    background-color: var(--color-tertiary);
+}
+
+#downloadExcel {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+/* Button Group Styles */
+.button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#stopDetection, 
+#downloadExcel {
+    grid-column: 1 / -1;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 1rem;
+    grid-column: 1 / -1;
+}
+
+.control-buttons button {
+    flex: 1;
+}
+
+/* Data Table Styles */
+.data-table-container {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-height: 400px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    background: white;
+    border-spacing: 0;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.data-table th,
+.data-table td {
+    padding: 1rem 1.5rem;
+}
+
+.data-table th {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 500;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Status Styles */
+.status-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+#status {
+    margin: 0;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.emergency-stop {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffebee;
+    border-radius: 5px;
+    display: none;
+}
+
+.emergency-stop button {
+    background-color: #d32f2f;
+    margin-top: 10px;
+}
+
+/* Progress and Status Indicators */
+.progress-bar-container {
+    flex-grow: 1;
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.status-ok {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-deficit {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+        margin: 10px;
+    }
+
+    .button-group {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        min-height: 50px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Table Paused State */
+.data-table.paused {
+    opacity: 0.7;
+    position: relative;
+}
+
+.data-table.paused::after {
+    content: "SISTEMA EN PAUSA";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.action-button {
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    min-height: 60px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.action-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+}

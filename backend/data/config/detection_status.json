@@ -1,0 +1,80 @@
+{
+  "sound": {
+    "current_count": 0,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  },
+  "next": {
+    "current_count": 7,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  },
+  "qr": {
+    "current_count": 0,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  },
+  "micro": {
+    "current_count": 0,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  },
+  "puzzle": {
+    "current_count": 0,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  },
+  "key": {
+    "current_count": 1,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  },
+  "magnet": {
+    "current_count": 2,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  },
+  "women": {
+    "current_count": 0,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  },
+  "umbrella": {
+    "current_count": 0,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  },
+  "star": {
+    "current_count": 5,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  },
+  "flower": {
+    "current_count": 0,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  },
+  "heart": {
+    "current_count": 7,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  },
+  "x": {
+    "current_count": 2,
+    "target": 25,
+    "deficit": 0,
+    "type": "aster"
+  }
+}

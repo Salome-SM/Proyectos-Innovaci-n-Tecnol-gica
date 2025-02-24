@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Detección</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/L_Siembra/frontend/assets/css/detector.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Control de Detección</h1>
+        <div class="button-group">
+            <div class="control-buttons">
+                <button id="startDetection" class="action-button">
+                    <span class="emoji">▶️</span> Iniciar Detección
+                </button>
+                <button id="pauseDetection" class="action-button" disabled>
+                    <span class="emoji">⏸️</span> Pausar Detección
+                </button>
+                <button id="resumeDetection" class="action-button" disabled>
+                    <span class="emoji">⏯️</span> Reanudar Detección
+                </button>
+            </div>
+            <button id="stopDetection" class="action-button">
+                <span class="emoji">⏹️</span> Detener Detección
+            </button>
+            <button id="downloadExcel" class="action-button">
+                <span class="emoji">📊</span> Descargar Excel
+            </button>
+        </div>
+
+        <div class="data-table-container">
+            <h2 class="table-title">Estado de Detecciones</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Persona</th>
+                        <th>Conteo</th>
+                        <th>Progreso</th>
+                        <th>Estado</th>
+                        <th>Déficit/Restante</th>
+                    </tr>
+                </thead>
+                <tbody id="detectionData">
+                    <tr>
+                        <td colspan="5" style="text-align: center;">Sin datos de detección</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="refresh-time" id="lastUpdate">
+                Última actualización: --:--:--
+            </div>
+        </div>
+
+        <div class="status-container">
+            <p id="status">Sistema listo</p>
+            <div class="emergency-stop" id="emergencyStop" style="display: none;">
+                <p>Si no se puede detener normalmente, use el botón de emergencia:</p>
+                <button id="forceStop" class="action-button">
+                    <span class="emoji">🚫</span> Detención Forzada
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/L_Siembra/frontend/assets/js/detector.js"></script>
+</body>
+</html>
