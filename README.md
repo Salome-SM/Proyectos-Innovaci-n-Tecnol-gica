@@ -1,6 +1,6 @@
 # 🚀 Proyectos de Innovación Tecnológica
 
-Este repositorio contiene mis proyectos destacados en desarrollo Full Stack, visión artificial e inteligencia artificial. Cada proyecto incluye código fuente, documentación y ejemplos para facilitar su comprensión.
+Este repositorio contiene mis proyectos destacados en desarrollo Full Stack, visión artificial e inteligencia artificial. Cada proyecto incluye código fuente y documentación.
 
 ---
 
@@ -9,16 +9,15 @@ Este repositorio contiene mis proyectos destacados en desarrollo Full Stack, vis
 Cada proyecto está organizado en su propia carpeta con los siguientes elementos:
 
 - **Código Fuente**: Implementación completa del proyecto.
-- **Documentación**: Archivo `README.md` con detalles específicos.
-- **Dependencias**: Archivo `requirements.txt` o similar con las bibliotecas necesarias.
-- **Ejemplos**: Capturas de pantalla, gráficos o resultados.
+- **Documentación**: Descripción específica del proyecto (próximamente en archivos `README.md` dentro de cada carpeta).
+- **Dependencias**: Archivos como `requirements.txt` o similares con las bibliotecas necesarias.
 
 ---
 
 ## 🌟 Proyectos Destacados
 
 ### 1. **Modelo de Visión Artificial para Conteo de Plantas**
-- **Descripción**: Automatización del conteo de plantas recién sembradas utilizando OpenCV y Python. Mejoró la precisión del conteo manual en un 5%.
+- **Descripción**: Automatización del conteo de plantas recién sembradas utilizando OpenCV y Python. Mejoró la precisión del conteo manual en un **5%**.
 - **Tecnologías**: Python, OpenCV, HTML, CSS, PHP, MySQL.
 - **Enlace**: [Conteo-Plantas](Conteo-Plantas)
 
@@ -28,25 +27,18 @@ Cada proyecto está organizado en su propia carpeta con los siguientes elementos
 - **Enlace**: [Monitoreo-Rendimiento](Monitoreo-Rendimiento)
 
 ### 3. **Plataforma de Innovación Colaborativa**
-- **Descripción**: Aplicación web para que empleados propongan ideas, resuelvan problemas y ganen puntos.
+- **Descripción**: Aplicación web para que empleados propongan ideas, resuelvan problemas y ganen puntos. Incluye módulos de encuestas, gráficas estadísticas y almacenamiento en MySQL.
 - **Tecnologías**: HTML, CSS, PHP, MySQL.
 - **Enlace**: [Plataforma-Innovacion](Plataforma-Innovacion)
-
-### 4. **Red Neuronal para Detección de Neumonía**
-- **Descripción**: Modelo de deep learning con 92% de precisión para detectar neumonía en imágenes médicas.
-- **Tecnologías**: PyTorch, Scikit-learn.
-- **Enlace**: [Deteccion-Neumonia](Deteccion-Neumonia)
-
----
 
 ## 🛠️ Requisitos
 
 Para ejecutar los proyectos, asegúrate de tener instaladas las siguientes herramientas:
 
-- Python 3.x
-- PHP 7.x o superior
-- MySQL
-- Bibliotecas específicas (ver `requirements.txt` en cada carpeta)
+- **Python 3.x**: Para proyectos basados en Python.
+- **PHP 7.x o superior**: Para proyectos backend/frontend.
+- **MySQL**: Para bases de datos relacionales.
+- **Bibliotecas específicas**: Consulta los archivos `requirements.txt` o similares en cada carpeta.
 
 ---
 
