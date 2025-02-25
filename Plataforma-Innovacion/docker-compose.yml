@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://user:password@db:5432/webbd
+
+  db:
+    image: postgres:12
+    environment:
+      - POSTGRES_DB=webbd
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

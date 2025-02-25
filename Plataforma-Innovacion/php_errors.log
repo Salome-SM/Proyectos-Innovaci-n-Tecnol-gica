@@ -1,0 +1,30 @@
+[20-Aug-2024 01:56:00 Europe/Berlin] Conexión a la base de datos exitosa
+[20-Aug-2024 01:56:00 Europe/Berlin] Método de solicitud: POST
+[20-Aug-2024 01:56:00 Europe/Berlin] Datos POST recibidos: Array
+(
+    [emailOrPhone] => innovaciontr@gmail.com
+    [password] => password123
+)
+
+[20-Aug-2024 01:56:00 Europe/Berlin] Intento de inicio de sesión para: innovaciontr@gmail.com
+[20-Aug-2024 01:56:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function login() on null in C:\xampp\htdocs\web\controllers\LoginController.php:18
+Stack trace:
+#0 C:\xampp\htdocs\web\index.php(22): LoginController->login()
+#1 {main}
+  thrown in C:\xampp\htdocs\web\controllers\LoginController.php on line 18
+[20-Aug-2024 01:56:26 Europe/Berlin] Conexión a la base de datos exitosa
+[20-Aug-2024 01:56:26 Europe/Berlin] Método de solicitud: GET
+[20-Aug-2024 01:56:50 Europe/Berlin] Conexión a la base de datos exitosa
+[20-Aug-2024 01:56:50 Europe/Berlin] Método de solicitud: POST
+[20-Aug-2024 01:56:50 Europe/Berlin] Datos POST recibidos: Array
+(
+    [emailOrPhone] => innovaciontr@gmail.com
+    [password] => password123
+)
+
+[20-Aug-2024 01:56:50 Europe/Berlin] Intento de inicio de sesión para: innovaciontr@gmail.com
+[20-Aug-2024 01:56:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function login() on null in C:\xampp\htdocs\web\controllers\LoginController.php:18
+Stack trace:
+#0 C:\xampp\htdocs\web\index.php(22): LoginController->login()
+#1 {main}
+  thrown in C:\xampp\htdocs\web\controllers\LoginController.php on line 18

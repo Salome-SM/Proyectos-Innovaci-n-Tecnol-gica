@@ -1,0 +1,1467 @@
+Config:
+<?php
+$host = 'localhost';
+$dbname = 'webbd';
+$user = 'postgres';
+$password = 'password';
+
+try {
+    $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    error_log("Conexión a la base de datos exitosa");
+} catch(PDOException $e) {
+    error_log("Error de conexión a la base de datos: " . $e->getMessage());
+    die("Error de conexión: " . $e->getMessage());
+}
+
+
+Controllers:
+
+- AuthController.php:
+<?php
+class AuthController {
+    public function logout() {
+        // Iniciar sesión si aún no se ha iniciado
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        // Destruir todas las variables de sesión
+        $_SESSION = array();
+
+        // Si se desea destruir la sesión completamente, borra también la cookie de sesión.
+        if (ini_get("session.use_cookies")) {
+            $params = session_get_cookie_params();
+            setcookie(session_name(), '', time() - 42000,
+                $params["path"], $params["domain"],
+                $params["secure"], $params["httponly"]
+            );
+        }
+
+        // Finalmente, destruir la sesión
+        session_destroy();
+
+        // Redirigir al usuario a la página de login
+        header("Location: index.php?action=login");
+        exit();
+    }
+}
+
+- DashboardController.php: 
+<?php
+require_once 'models/Survey.php';
+
+class DashboardController {
+    private $pdo;
+    private $survey;
+
+    public function __construct($pdo) {
+        $this->pdo = $pdo;
+        $this->survey = new Survey($this->pdo);
+    }
+
+    public function showDashboard() {
+        if (!isset($_SESSION['user_id'])) {
+            header('Location: index.php');
+            exit;
+        }
+
+        $totalSurveys = $this->getTotalSurveys();
+        $totalPrioritized = $this->getTotalPrioritizedIdeas();
+
+        require 'views/dashboard.php';
+    }
+
+    private function getTotalSurveys() {
+        return $this->survey->getTotalSurveys();
+    }
+
+    private function getTotalPrioritizedIdeas() {
+        return $this->survey->getTotalPrioritizedIdeas();
+    }
+}
+- LoginController.php:
+<?php
+require_once 'models/User.php';
+
+class LoginController {
+    private $user;
+    private $pdo;
+
+    public function __construct($pdo) {
+        error_log("LoginController constructor called");
+        $this->pdo = $pdo;
+        if ($this->pdo === null) {
+            error_log("PDO is null in LoginController constructor");
+        } else {
+            error_log("PDO is not null in LoginController constructor");
+        }
+        
+        try {
+            $this->user = new User($this->pdo);
+            if ($this->user === null) {
+                error_log("User object is null after creation");
+            } else {
+                error_log("User object created successfully");
+            }
+        } catch (Exception $e) {
+            error_log("Exception when creating User object: " . $e->getMessage());
+        }
+    }
+
+    public function login() {
+        error_log("Login method called");
+        if ($this->user === null) {
+            error_log("User object is null in login method");
+            // Intenta crear el objeto User nuevamente
+            $this->user = new User($this->pdo);
+        }
+        
+        error_log("Método de solicitud: " . ($_SERVER['REQUEST_METHOD'] ?? 'No definido'));
+        
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            error_log("Datos POST recibidos: " . print_r($_POST, true));
+            
+            $emailOrUser = $_POST['emailOrUser'] ?? '';
+            $password = $_POST['password'] ?? '';
+
+            error_log("Intento de inicio de sesión para: " . $emailOrUser);
+
+            if ($this->user !== null) {
+                $user = $this->user->login($emailOrUser, $password);
+                error_log("Resultado de autenticación: " . ($user ? 'Éxito' : 'Fallo'));
+                
+                if ($user) {
+                    session_start();
+                    $_SESSION['user_id'] = $user['id'];
+                    $_SESSION['email'] = $user['email'];
+                    
+                    // Redirige según el tipo de usuario
+                    $email = $user['email'];
+                    $adminUsers = ['innovaciontr@gmail.com', 'gerencia@gmail.com', 'gh@gmail.com', 'poscosechaD@gmail.com', 'produccionD@gmail.com'];
+
+                    if (in_array($email, $adminUsers)) {
+                        header('Location: index.php?action=dashboard');
+                    } else {
+                        header('Location: index.php?action=survey');
+                    }
+                    exit;
+                } else {
+                    $error = "Credenciales inválidas";
+                    error_log("Inicio de sesión fallido para: " . $emailOrUser);
+                }
+            } else {
+                error_log("User object is still null, cannot proceed with login");
+                $error = "Error interno del servidor";
+            }
+        }
+        require 'views/login.php';
+    }
+}
+
+- SurveyController.php:
+<?php
+require_once __DIR__ . '/../models/Survey.php';
+require_once __DIR__ . '/../lib/fpdf.php';
+
+// Definición de la clase PDF fuera de cualquier método
+class PDF extends FPDF {
+    protected $widths;
+    protected $aligns;
+    protected $lastY;
+
+    function Header() {
+        // Colores corporativos
+        $azulCorporativo = [0, 32, 96]; // #002060
+        $amarilloCorporativo = [251, 188, 5]; // #FBBC05
+        
+        // Título principal con fondo azul
+        $this->SetFillColor($azulCorporativo[0], $azulCorporativo[1], $azulCorporativo[2]);
+        $this->SetTextColor(255, 255, 255);
+        $this->SetFont('Arial', 'B', 20);
+        $this->Cell(0, 20, 'Ideas Creativas', 0, 1, 'C', true);
+        $this->Ln(5);
+
+        // Fecha de generación
+        $this->SetTextColor(0);
+        $this->SetFont('Arial', 'I', 10);
+        $this->Cell(0, 10, 'Fecha de generacion: ' . date('d/m/Y H:i'), 0, 1, 'R');
+        
+        // Calcular anchos optimizados
+        $pageWidth = $this->GetPageWidth() - 20; // 20mm de margen total
+        $detailsWidth = $pageWidth * 0.40; // 40% del ancho para detalles
+        $remainingWidth = $pageWidth - $detailsWidth;
+        
+        // Distribuir el espacio restante
+        $this->widths = [
+            $remainingWidth * 0.09,  // Fecha
+            $remainingWidth * 0.15,  // Nombre
+            $remainingWidth * 0.16,  // Cédula
+            $remainingWidth * 0.09,  // Sede
+            $remainingWidth * 0.15,  // Área
+            $remainingWidth * 0.13,  // Tipo
+            $remainingWidth * 0.14,  // Oportunidad
+            $remainingWidth * 0.15,  // Impacto
+            $detailsWidth            // Detalles
+        ];
+        
+        // Encabezados con fondo amarillo
+        $this->SetFillColor($amarilloCorporativo[0], $amarilloCorporativo[1], $amarilloCorporativo[2]);
+        $this->SetTextColor($azulCorporativo[0], $azulCorporativo[1], $azulCorporativo[2]);
+        $this->SetFont('Arial', 'B', 10);
+        
+        // Headers
+        $headers = ['Fecha', 'Nombre', 'Cedula', 'Sede', 'Area', 'Tipo', 'Oportunidad', 'Impacto', 'Detalles'];
+        foreach($headers as $i => $header) {
+            $this->Cell($this->widths[$i], 12, $header, 1, 0, 'C', true);
+        }
+        $this->Ln();
+        $this->lastY = $this->GetY();
+    }
+
+    function Footer() {
+        $this->SetY(-15);
+        $this->SetFont('Arial', 'I', 8);
+        $this->Cell(0, 10, 'Página ' . $this->PageNo() . '/{nb}', 0, 0, 'C');
+    }
+
+    protected function getLastY() {
+        $y = $this->GetY();
+        return ($y !== null && $y !== false) ? $y : $this->lastY;
+    }
+
+    function SetWidths($w) {
+        $this->widths = $w;
+    }
+
+    function SetAligns($a) {
+        $this->aligns = $a;
+    }
+
+    function CheckPageBreak($h) {
+        $currentY = $this->getLastY();
+        if($currentY + $h > $this->PageBreakTrigger) {
+            $this->AddPage($this->CurOrientation);
+            $this->lastY = $this->GetY();
+        }
+    }
+
+    function NbLines($w, $txt) {
+        $cw = &$this->CurrentFont['cw'];
+        if($w==0) {
+            $w = $this->w - $this->rMargin - $this->x;
+        }
+        $wmax = ($w - 2 * $this->cMargin) * 1000 / $this->FontSize;
+        $s = str_replace("\r", '', (string)$txt);
+        $nb = strlen($s);
+        if($nb > 0 && $s[$nb-1] == "\n") {
+            $nb--;
+        }
+        $sep = -1;
+        $i = 0;
+        $j = 0;
+        $l = 0;
+        $nl = 1;
+        while($i < $nb) {
+            $c = $s[$i];
+            if($c == "\n") {
+                $i++;
+                $sep = -1;
+                $j = $i;
+                $l = 0;
+                $nl++;
+                continue;
+            }
+            if($c == ' ') {
+                $sep = $i;
+            }
+            $l += $cw[$c] ?? 1000;
+            if($l > $wmax) {
+                if($sep == -1) {
+                    if($i == $j) {
+                        $i++;
+                    }
+                } else {
+                    $i = $sep + 1;
+                }
+                $sep = -1;
+                $j = $i;
+                $l = 0;
+                $nl++;
+            } else {
+                $i++;
+            }
+        }
+        return $nl;
+    }
+
+    function MultiCellRow($data) {
+        $maxHeight = 8;
+        $lineHeight = 5;
+        $padding = 2;
+        
+        // Calcular altura necesaria
+        $heights = array();
+        for($i = 0; $i < count($data); $i++) {
+            $width = $this->widths[$i] - 2*$padding;
+            
+            if($i == 8) { // Columna de detalles
+                $this->SetFont('Arial', '', 9);
+                $details = explode("\n", $data[$i]);
+                $heightNeeded = 0;
+                
+                foreach($details as $detail) {
+                    if(!empty($detail)) {
+                        $text = substr($detail, strpos($detail, ':') + 1);
+                        $lines = $this->NbLines($width - 20, trim($text));
+                        $heightNeeded += $lines * $lineHeight;
+                    }
+                }
+                
+                $heights[$i] = $heightNeeded + 6*$padding;
+            } else {
+                $lines = $this->NbLines($width, $data[$i]);
+                $heights[$i] = $lines * $lineHeight + 2*$padding;
+            }
+            $maxHeight = max($maxHeight, $heights[$i]);
+        }
+        
+        // Verificar salto de página
+        $this->CheckPageBreak($maxHeight);
+        
+        $startX = $this->GetX();
+        $startY = $this->getLastY();
+        
+        // Dibujar celdas
+        for($i = 0; $i < count($data); $i++) {
+            $this->SetXY($startX, $startY);
+            
+            // Dibujar el borde de la celda
+            $this->Rect($startX, $startY, $this->widths[$i], $maxHeight);
+            
+            if($i == 8) { // Columna de detalles
+                $currentX = $startX + $padding;
+                $currentY = $startY + $padding;
+                
+                $details = explode("\n", $data[$i]);
+                foreach($details as $index => $detail) {
+                    if(strpos($detail, 'Nombre:') === 0) {
+                        $this->SetXY($currentX, $currentY);
+                        $this->SetFont('Arial', 'B', 9);
+                        $this->Cell(15, $lineHeight, 'Nombre:', 0, 0, 'L');
+                        
+                        $this->SetFont('Arial', '', 9);
+                        $nombre = trim(substr($detail, 7));
+                        $this->MultiCell($this->widths[$i] - 2*$padding - 15, $lineHeight, 
+                            iconv('UTF-8', 'windows-1252', $nombre), 0, 'L');
+                        $currentY = $this->lastY = $this->GetY() + $padding;
+                    }
+                    elseif(strpos($detail, 'Descripción:') === 0) {
+                        $this->SetXY($currentX, $currentY);
+                        $this->SetFont('Arial', 'B', 9);
+                        $this->Cell(20, $lineHeight, 'Descripción:', 0, 0, 'L');
+                        
+                        $this->SetFont('Arial', '', 9);
+                        $descripcion = trim(substr($detail, 12));
+                        $this->SetX($currentX + 20);
+                        $this->MultiCell($this->widths[$i] - 2*$padding - 20, $lineHeight, 
+                            iconv('UTF-8', 'windows-1252', $descripcion), 0, 'L');
+                        $this->lastY = $this->GetY();
+                    }
+                }
+            } else {
+                // Centrar contenido para otras columnas
+                $this->SetFont('Arial', '', 9);
+                $y = $startY + ($maxHeight - $heights[$i])/2;
+                $this->SetXY($startX + $padding, $y);
+                $this->MultiCell($this->widths[$i] - 2*$padding, $lineHeight, 
+                    iconv('UTF-8', 'windows-1252', $data[$i]), 0, 'C');
+            }
+            
+            $startX += $this->widths[$i];
+        }
+        
+        // Actualizar la posición Y para la siguiente fila
+        $this->SetY($startY + $maxHeight);
+        $this->lastY = $this->GetY();
+    }
+}
+class SurveyController {
+    private $pdo;
+    private $survey;
+
+    public function __construct($pdo) {
+        $this->pdo = $pdo;
+        $this->survey = new Survey($pdo);
+    }
+
+    public function showStats() {
+        try {
+            $surveys = $this->survey->getAllSurveys();
+            $statsBySede = $this->survey->getStatsBySede();
+            $pointsStats = $this->survey->getPointsStats(); // Añade esta línea
+            require 'views/survey_stats.php';
+        } catch (Exception $e) {
+            $error = "Error al obtener las estadísticas: " . $e->getMessage();
+            require 'views/survey_stats.php';
+        }
+    }
+
+    public function showSurvey() {
+        require 'views/survey.php';
+    }
+
+    public function saveSurvey() {
+        if (!isset($_SESSION['user_id'])) {
+            $error = "Usuario no autenticado";
+            require 'views/survey.php';
+            return;
+        }
+    
+        $userId = $_SESSION['user_id'];
+        $name = $_POST['name'] ?? '';
+        $cedula = $_POST['cedula'] ?? '';
+        $sede = $_POST['sede'] ?? '';
+        $area = $_POST['area'] ?? '';
+        $initiativeType = $_POST['initiativeType'] ?? '';
+        $oportunidad = $_POST['oportunidad'] ?? '';
+        $impacto = $_POST['impacto'] ?? '';
+        $fechaIngreso = $_POST['fechaIngreso'] ?? date('Y-m-d H:i:s');
+    
+        $specificData = $this->getSpecificData($initiativeType);
+        $attachmentPath = null;
+    
+        try {
+            $attachmentPath = $this->handleFileUpload();
+            
+            $result = $this->survey->saveSurvey($userId, $name, $cedula, $sede, $area, $initiativeType, $oportunidad, $impacto, $specificData, $attachmentPath, $fechaIngreso);
+            
+            if ($result) {
+                $message = "Encuesta guardada con éxito";
+                if ($attachmentPath) {
+                    $message .= " y el archivo se cargó correctamente";
+                }
+            } else {
+                throw new Exception("Error al guardar la encuesta en la base de datos");
+            }
+        } catch (Exception $e) {
+            $error = "Error: " . $e->getMessage();
+            error_log("Error en saveSurvey: " . $e->getMessage());
+            
+            // Si el archivo se cargó pero hubo un error al guardar en la base de datos, eliminamos el archivo
+            if ($attachmentPath && file_exists($attachmentPath)) {
+                unlink($attachmentPath);
+            }
+        }
+    
+        require 'views/survey.php';
+    }
+
+    private function getSpecificData($initiativeType) {
+        switch ($initiativeType) {
+            case 'idea':
+                return [
+                    'Nombre Idea' => $_POST['nombreIdea'] ?? '',
+                    'Descripcion' => $_POST['descripcionIdea'] ?? ''
+                ];
+            case 'problema':
+                return [
+                    'Nombre Problema' => $_POST['nombreProblema'] ?? '',
+                    'Descripción Problema' => $_POST['descripcionProblema'] ?? '',
+                ];
+            case 'reto':
+                return [
+                    'Nombre Reto' => $_POST['nombreReto'] ?? '',
+                    'Descripción Reto' => $_POST['descripcionReto'] ?? '',
+                ];
+            default:
+                return [];
+        }
+    }
+
+    private function handleFileUpload() {
+        if (isset($_FILES['attachment']) && $_FILES['attachment']['error'] == 0) {
+            $uploadDir = 'uploads/';
+            
+            // Crear el directorio si no existe
+            if (!file_exists($uploadDir) && !is_dir($uploadDir)) {
+                if (!mkdir($uploadDir, 0777, true)) {
+                    error_log("No se pudo crear el directorio de carga");
+                    throw new Exception("No se pudo crear el directorio de carga");
+                }
+            }
+            
+            $attachmentPath = $uploadDir . basename($_FILES['attachment']['name']);
+            
+            if (move_uploaded_file($_FILES['attachment']['tmp_name'], $attachmentPath)) {
+                return $attachmentPath;
+            } else {
+                $errorMessage = "No se pudo mover el archivo cargado";
+                $error = error_get_last();
+                if ($error !== null) {
+                    $errorMessage .= ": " . $error['message'];
+                }
+                error_log($errorMessage);
+                throw new Exception("No se pudo guardar el archivo adjunto. Por favor, inténtelo de nuevo.");
+            }
+        }
+        return null;
+    }
+
+    public function listSurveys() {
+        try {
+            $filters = [
+                'sede' => $_GET['sede'] ?? null,
+                'area' => $_GET['area'] ?? null,
+                'initiative_type' => $_GET['initiative_type'] ?? null,
+                'oportunidad' => $_GET['oportunidad'] ?? null,
+                'impacto' => $_GET['impacto'] ?? null,
+            ];
+    
+            $surveys = $this->survey->getAllSurveysWithRatings($filters);
+            
+            // Obtener listas únicas para los filtros
+            $sedes = $this->survey->getUniqueSedes();
+            $areas = $this->survey->getUniqueAreas();
+            $oportunidades = $this->survey->getUniqueOportunidades();
+            $impactos = $this->survey->getUniqueImpactos();
+    
+            require 'views/survey_list.php';
+        } catch (Exception $e) {
+            $error = "Error al obtener las encuestas: " . $e->getMessage();
+            require 'views/survey_list.php';
+        }
+    }
+
+    function downloadPDF() {
+        try {
+            $surveys = $this->survey->getAllSurveys();
+            
+            $pdf = new PDF('L', 'mm', 'A4');
+            $pdf->SetMargins(10, 10, 10);
+            $pdf->AliasNbPages();
+            $pdf->AddPage();
+            $pdf->SetAutoPageBreak(true, 15);
+            
+            foreach ($surveys as $survey) {
+                $specificData = json_decode($survey['specific_data'], true);
+                
+                switch ($survey['initiative_type']) {
+                    case 'idea':
+                        $details = "Nombre: " . trim($specificData['nombreIdea'] ?? '') . "\n";
+                        $details .= "Descripcion: " . trim($specificData['descripcionIdea'] ?? '');
+                        break;
+                    case 'problema':
+                        $details = "Nombre: " . trim($specificData['nombreProblema'] ?? '') . "\n";
+                        $details .= "Descripcion: " . trim($specificData['descripcionProblema'] ?? '');
+                        break;
+                    case 'reto':
+                        $details = "Nombre: " . trim($specificData['nombreReto'] ?? '') . "\n";
+                        $details .= "Descripcion: " . trim($specificData['descripcionReto'] ?? '');
+                        break;
+                }
+    
+                $pdf->MultiCellRow([
+                    date('d/m/Y', strtotime($survey['fecha_ingreso'])),
+                    trim($survey['name']),
+                    trim($survey['cedula']),
+                    trim($survey['sede']),
+                    trim($survey['area']),
+                    trim($survey['initiative_type']),
+                    trim($survey['oportunidad']),
+                    trim($survey['impacto']),
+                    $details
+                ]);
+            }
+    
+            $pdf->Output('D', 'reporte_encuestas.pdf');
+        } catch (Exception $e) {
+            error_log("Error al generar el PDF: " . $e->getMessage());
+            throw new Exception("Error al generar el PDF: " . $e->getMessage());
+        }
+    }
+    public function showRateSurveys() {
+        try {
+            $surveys = $this->survey->getAllSurveysWithRatings();
+            $userEmail = $_SESSION['email'] ?? '';
+            
+            // Obtener las listas para los filtros
+            $sedes = $this->survey->getUniqueSedes();
+            $areas = $this->survey->getUniqueAreas();
+            $oportunidades = $this->survey->getUniqueOportunidades();
+            $impactos = $this->survey->getUniqueImpactos();
+    
+            $uniqueSurveys = [];
+            foreach ($surveys as $survey) {
+                if (!isset($uniqueSurveys[$survey['id']])) {
+                    $calificadores = $this->survey->getCalificadores($survey['impacto'], $survey['area'], $survey['oportunidad']);
+                    $survey['canRate'] = isset($calificadores[$userEmail]);
+                    $survey['ratings'] = $this->survey->getRatingsForSurvey($survey['id']);
+                    $uniqueSurveys[$survey['id']] = $survey;
+                }
+            }
+    
+            $uniqueSurveys = array_values($uniqueSurveys);
+            require 'views/rate_surveys.php';
+        } catch (Exception $e) {
+            $error = "Error al obtener las encuestas para calificar: " . $e->getMessage();
+            require 'views/rate_surveys.php';
+        }
+    }
+    public function getRatingForm() {
+        if (!isset($_SESSION['user_id']) || !isset($_GET['surveyId'])) {
+            echo json_encode(['error' => 'Acceso no autorizado o ID de encuesta no proporcionado']);
+            exit;
+        }
+    
+        $surveyId = $_GET['surveyId'];
+        try {
+            $survey = $this->survey->getSurveyById($surveyId);
+            if (!$survey) {
+                echo json_encode(['error' => 'Encuesta no encontrada']);
+                exit;
+            }
+            
+            // Preparar las variables necesarias para la vista
+            $calificadores = $this->survey->getCalificadores($survey['impacto'], $survey['area'], $survey['oportunidad']);
+            
+            // Incluir la vista con las variables necesarias
+            require 'views/rating_form.php';
+            
+        } catch (Exception $e) {
+            echo json_encode(['error' => 'Error al obtener la encuesta: ' . $e->getMessage()]);
+            exit;
+        }
+    }
+
+    public function saveRating() {
+        header('Content-Type: application/json');
+        try {
+            if (!isset($_SESSION['user_id'])) {
+                throw new Exception("Usuario no autenticado");
+            }
+    
+            $surveyId = $_POST['surveyId'] ?? null;
+            $userId = $_SESSION['user_id'];
+            $userEmail = $_SESSION['email'];
+    
+            if (!$surveyId) {
+                throw new Exception("ID de encuesta no proporcionado");
+            }
+    
+            $survey = $this->survey->getSurveyById($surveyId);
+            $calificadores = $this->survey->getCalificadores($survey['impacto'], $survey['area'], $survey['oportunidad']);
+            
+            if (!isset($calificadores[$userEmail])) {
+                throw new Exception("No está autorizado para calificar esta encuesta");
+            }
+    
+            $userPermisos = $calificadores[$userEmail];
+            $weight = $userPermisos['weight'];
+            $camposPermitidos = $userPermisos['campos'];
+    
+            // Verificar y procesar solo los campos permitidos
+            $deseable = in_array('deseable', $camposPermitidos) ? ($_POST['deseable'] ?? null) : null;
+            $impactaEstrategia = in_array('impacta_estrategia', $camposPermitidos) ? ($_POST['impactaEstrategia'] ?? null) : null;
+            $factible = in_array('factible', $camposPermitidos) ? ($_POST['factible'] ?? null) : null;
+            $viable = in_array('viable', $camposPermitidos) ? ($_POST['viable'] ?? null) : null;
+    
+            $success = $this->survey->saveRating($surveyId, $userId, $deseable, $impactaEstrategia, $factible, $viable, $weight);
+    
+            if ($success) {
+                echo json_encode([
+                    'success' => true,
+                    'message' => 'Calificación guardada con éxito',
+                    'ratings' => $this->survey->getRatingsForSurvey($surveyId),
+                    'finalRating' => $this->survey->getFinalRating($surveyId)
+                ]);
+            } else {
+                throw new Exception("Error al guardar la calificación");
+            }
+        } catch (Exception $e) {
+            echo json_encode([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]);
+        }
+    }
+
+    public function getRatings() {
+        if (!isset($_GET['surveyId'])) {
+            echo "Error: No se proporcionó el ID de la encuesta.";
+            return;
+        }
+
+        $surveyId = $_GET['surveyId'];
+        try {
+            $ratings = $this->survey->getRatingsForSurvey($surveyId);
+            $finalRating = $this->survey->getFinalRating($surveyId);
+            
+            include 'views/ratings_display.php';
+        } catch (Exception $e) {
+            echo "Error al obtener las calificaciones: " . $e->getMessage();
+        }
+    }
+    public function viewRanking() {
+        try {
+            $rankings = $this->survey->getUserRankingData();
+            require 'views/view_ranking.php';
+        } catch (Exception $e) {
+            $error = "Error al obtener el ranking: " . $e->getMessage();
+            require 'views/view_ranking.php';
+        }
+    }
+    
+    public function updatePoints() {
+        if ($_SESSION['email'] !== 'innovaciontr@gmail.com') {
+            http_response_code(403);
+            echo json_encode(['success' => false, 'message' => 'No autorizado']);
+            return;
+        }
+    
+        try {
+            $cedula = $_POST['cedula'] ?? '';
+            $participationPoints = intval($_POST['participationPoints'] ?? 0);
+            $impactPoints = intval($_POST['impactPoints'] ?? 0);
+            $comments = $_POST['comments'] ?? '';
+    
+            $success = $this->survey->updateUserPoints($cedula, $participationPoints, $impactPoints, $comments);
+            
+            if ($success) {
+                $rankings = $this->survey->getUserRankingData();
+                echo json_encode(['success' => true, 'data' => $rankings]);
+            } else {
+                throw new Exception("Error al actualizar los puntos");
+            }
+        } catch (Exception $e) {
+            http_response_code(500);
+            echo json_encode(['success' => false, 'message' => $e->getMessage()]);
+        }
+    }
+
+    public function getRatingDetails() {
+        if (!isset($_SESSION['user_id']) || !isset($_GET['surveyId'])) {
+            echo json_encode(['success' => false, 'message' => 'No autorizado o ID de encuesta no proporcionado']);
+            exit;
+        }
+    
+        $surveyId = $_GET['surveyId'];
+        try {
+            $ratings = $this->survey->getRatingsForSurvey($surveyId);
+            $finalRating = $this->survey->getFinalRating($surveyId);
+            echo json_encode([
+                'success' => true,
+                'ratings' => $ratings,
+                'finalRating' => $finalRating
+            ]);
+        } catch (Exception $e) {
+            echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);
+        }
+        exit;
+    }
+
+    private function calculateSectionAverage($values) {
+        $sum = array_sum($values);
+        $count = count(array_filter($values, function($v) { return $v > 0; }));
+        return $count > 0 ? $sum / $count : 0;
+    }
+
+    public function showPrioritizeSurveys() {
+        try {
+            $surveys = $this->survey->getAllSurveysWithRatings();
+            $surveysWithDetails = [];
+            
+            foreach ($surveys as $survey) {
+                $survey['ratings'] = $this->survey->getRatingsForSurvey($survey['id']);
+                $survey['finalRating'] = $this->survey->getFinalRating($survey['id']);
+                $surveysWithDetails[] = $survey;
+            }
+            
+            require 'views/prioritize_surveys.php';
+        } catch (Exception $e) {
+            $error = "Error al obtener las encuestas para priorizar: " . $e->getMessage();
+            require 'views/prioritize_surveys.php';
+        }
+    }
+}
+
+
+
+-SurveyCharts.js:
+// SurveyCharts.js
+import React, { useState, useEffect } from 'react';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+
+const COLORS = ['#002060', '#FFC000', '#FF0000'];
+
+const SurveyCharts = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('api_surveys.php')
+      .then(response => response.json())
+      .then(data => setData(data))
+      .catch(error => console.error('Error:', error));
+  }, []);
+
+  const prepareDataByPerson = () => {
+    return data;
+  };
+
+  const prepareDataByArea = () => {
+    const areaData = data.reduce((acc, item) => {
+      if (!acc[item.area]) {
+        acc[item.area] = { Ideas: 0, Retos: 0, Problemas: 0 };
+      }
+      acc[item.area].Ideas += item.ideas;
+      acc[item.area].Retos += item.retos;
+      acc[item.area].Problemas += item.problemas;
+      return acc;
+    }, {});
+    return Object.entries(areaData).map(([name, values]) => ({ name, ...values }));
+  };
+
+  const prepareDataByType = () => {
+    const totalIdeas = data.reduce((sum, item) => sum + item.ideas, 0);
+    const totalRetos = data.reduce((sum, item) => sum + item.retos, 0);
+    const totalProblemas = data.reduce((sum, item) => sum + item.problemas, 0);
+    const total = totalIdeas + totalRetos + totalProblemas;
+    return [
+      { name: 'Ideas', value: (totalIdeas / total) * 100 },
+      { name: 'Retos', value: (totalRetos / total) * 100 },
+      { name: 'Problemas', value: (totalProblemas / total) * 100 }
+    ];
+  };
+
+  return (
+    <div style={{ fontFamily: 'Arial, sans-serif' }}>
+      <h2 style={{ color: '#002060', textAlign: 'center' }}>Indicadores de Encuestas</h2>
+      
+      <h3 style={{ color: '#002060' }}>Número de Ideas/Retos/Problemas por Persona</h3>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={prepareDataByPerson()} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="ideas" name="Ideas" fill="#002060" />
+          <Bar dataKey="retos" name="Retos" fill="#FFC000" />
+          <Bar dataKey="problemas" name="Problemas" fill="#FF0000" />
+        </BarChart>
+      </ResponsiveContainer>
+
+      <h3 style={{ color: '#002060' }}>Número de Ideas/Retos/Problemas por Área</h3>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={prepareDataByArea()} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="Ideas" fill="#002060" />
+          <Bar dataKey="Retos" fill="#FFC000" />
+          <Bar dataKey="Problemas" fill="#FF0000" />
+        </BarChart>
+      </ResponsiveContainer>
+
+      <h3 style={{ color: '#002060' }}>Distribución de Ideas/Retos/Problemas (%)</h3>
+      <ResponsiveContainer width="100%" height={300}>
+        <PieChart>
+          <Pie
+            data={prepareDataByType()}
+            cx="50%"
+            cy="50%"
+            labelLine={false}
+            outerRadius={80}
+            fill="#8884d8"
+            dataKey="value"
+            label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+          >
+            {prepareDataByType().map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))}
+          </Pie>
+          <Tooltip />
+        </PieChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};
+
+export default SurveyCharts;
+
+- RatingsDisplay.js:
+import React, { useState, useEffect } from 'react';
+
+const RatingsDisplay = () => {
+  const [ratingsData, setRatingsData] = useState([]);
+
+  useEffect(() => {
+    fetch('api_ratings.php')
+      .then(response => response.json())
+      .then(data => setRatingsData(data))
+      .catch(error => console.error('Error:', error));
+  }, []);
+
+  return (
+    <div>
+      <h2>Calificaciones de Encuestas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID Encuesta</th>
+            <th>Calificadores</th>
+            <th>Promedio Ponderado</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ratingsData.map((survey) => (
+            <tr key={survey.surveyId}>
+              <td>{survey.surveyId}</td>
+              <td>
+                {survey.ratings.map(rating => (
+                  <div key={rating.email}>
+                    {rating.email}: {rating.rating.toFixed(2)} (Peso: {(rating.weight * 100).toFixed(0)}%)
+                  </div>
+                ))}
+              </td>
+              <td>{survey.finalRating.toFixed(2)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default RatingsDisplay;
+
+models:
+
+-Survey.php:
+<?php
+class Survey {
+    private $pdo;
+
+    public function __construct($pdo) {
+        $this->pdo = $pdo;
+    }
+
+    public function saveSurvey($userId, $name, $cedula, $sede, $area, $initiativeType, $oportunidad, $impacto, $specificData, $attachmentPath, $fechaIngreso) {
+        try {
+            $sql = "INSERT INTO surveys (user_id, name, cedula, sede, area, initiative_type, oportunidad, impacto, specific_data, attachment_path, fecha_ingreso) 
+                    VALUES (:userId, :name, :cedula, :sede, :area, :initiativeType, :oportunidad, :impacto, :specificData, :attachmentPath, :fechaIngreso)";
+            
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                'userId' => $userId,
+                'name' => $name,
+                'cedula' => $cedula,
+                'sede' => $sede,
+                'area' => $area,
+                'initiativeType' => $initiativeType,
+                'oportunidad' => $oportunidad,
+                'impacto' => $impacto,
+                'specificData' => json_encode($specificData),
+                'attachmentPath' => $attachmentPath,
+                'fechaIngreso' => $fechaIngreso
+            ]);
+            
+            return true;
+        } catch (PDOException $e) {
+            error_log("Error en saveSurvey: " . $e->getMessage());
+            throw new Exception("Error al guardar la encuesta: " . $e->getMessage());
+        }
+    }
+
+    public function getAllSurveys() {
+        try {
+            $stmt = $this->pdo->query("SELECT * FROM surveys ORDER BY id DESC");
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error en getAllSurveys: " . $e->getMessage());
+            throw new Exception("Error al obtener las encuestas: " . $e->getMessage());
+        }
+    }
+
+    public function getSurveyById($id) {
+        try {
+            $stmt = $this->pdo->prepare("SELECT * FROM surveys WHERE id = :id");
+            $stmt->execute(['id' => $id]);
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error en getSurveyById: " . $e->getMessage());
+            throw new Exception("Error al obtener la encuesta: " . $e->getMessage());
+        }
+    }
+
+    public function saveRating($surveyId, $userId, $deseable, $impactaEstrategia, $factible, $viable, $weight) {
+        $sql = "INSERT INTO survey_ratings (survey_id, user_id, deseable, impacta_estrategia, factible, viable, weight) 
+                VALUES (:survey_id, :user_id, :deseable, :impacta_estrategia, :factible, :viable, :weight)";
+        
+        $stmt = $this->pdo->prepare($sql);
+        return $stmt->execute([
+            ':survey_id' => $surveyId,
+            ':user_id' => $userId,
+            ':deseable' => $deseable,
+            ':impacta_estrategia' => $impactaEstrategia,
+            ':factible' => $factible,
+            ':viable' => $viable,
+            ':weight' => $weight
+        ]);
+    }
+    public function getCalificadores($impacto, $area, $oportunidad) {
+        // Arrays de áreas para validación
+        $areasProduccion = [
+            'mipe', 'mirfe', 'labores culturales', 'calidad', 
+            'siembra', 'mantenimiento', 'corte', 'exvitro', 'propagación'
+        ];
+    
+        // Inicializar array de calificadores - ahora todos pueden calificar siempre
+        $calificadores = [
+            'innovaciontr@gmail.com' => [
+                'weight' => 0,
+                'campos' => ['factible', 'viable']  // Siempre estos campos
+            ],
+            'gerencia@gmail.com' => [
+                'weight' => 0,
+                'campos' => ['deseable', 'impacta_estrategia']  // Siempre estos campos
+            ],
+            'gh@gmail.com' => [
+                'weight' => 0,
+                'campos' => ['deseable', 'impacta_estrategia']
+            ],
+            'poscosechaD@gmail.com' => [
+                'weight' => 0,
+                'campos' => ['deseable', 'impacta_estrategia']
+            ],
+            'produccionD@gmail.com' => [
+                'weight' => 0,
+                'campos' => ['deseable', 'impacta_estrategia']
+            ]
+        ];
+    
+        // Normalizar inputs
+        $oportunidad = strtolower(trim($oportunidad));
+        $impacto = strtolower(trim($impacto));
+        $area = strtolower(trim($area));
+    
+        // Asignar pesos según reglas
+        // innovaciontr@gmail.com y gerencia@gmail.com siempre pueden calificar
+        if ($impacto == 'productividad') {
+            if (in_array($oportunidad, $areasProduccion)) {
+                $calificadores['innovaciontr@gmail.com']['weight'] = 0.30;
+                $calificadores['gerencia@gmail.com']['weight'] = 0.40;
+                $calificadores['produccionD@gmail.com']['weight'] = 0.30;
+            }
+            elseif ($oportunidad == 'poscosecha') {
+                $calificadores['innovaciontr@gmail.com']['weight'] = 0.30;
+                $calificadores['gerencia@gmail.com']['weight'] = 0.40;
+                $calificadores['poscosechaD@gmail.com']['weight'] = 0.30;
+            }
+            elseif ($oportunidad == 'gestion humana') {
+                $calificadores['innovaciontr@gmail.com']['weight'] = 0.30;
+                $calificadores['gerencia@gmail.com']['weight'] = 0.40;
+                $calificadores['gh@gmail.com']['weight'] = 0.30;
+            }
+        }
+        elseif (in_array($impacto, ['seguridad y salud', 'confort', 'fidelizacion'])) {
+            if (in_array($oportunidad, $areasProduccion)) {
+                $calificadores['innovaciontr@gmail.com']['weight'] = 0.20;
+                $calificadores['gerencia@gmail.com']['weight'] = 0.30;
+                $calificadores['produccionD@gmail.com']['weight'] = 0.20;
+                $calificadores['gh@gmail.com']['weight'] = 0.30;
+            }
+            elseif ($oportunidad == 'poscosecha') {
+                $calificadores['innovaciontr@gmail.com']['weight'] = 0.20;
+                $calificadores['gerencia@gmail.com']['weight'] = 0.30;
+                $calificadores['poscosechaD@gmail.com']['weight'] = 0.20;
+                $calificadores['gh@gmail.com']['weight'] = 0.30;
+            }
+            elseif ($oportunidad == 'gestion humana') {
+                $calificadores['innovaciontr@gmail.com']['weight'] = 0.30;
+                $calificadores['gerencia@gmail.com']['weight'] = 0.40;
+                $calificadores['gh@gmail.com']['weight'] = 0.30;
+            }
+        }
+        elseif ($impacto == 'innovacion') {
+            if (in_array($oportunidad, $areasProduccion)) {
+                $calificadores['innovaciontr@gmail.com']['weight'] = 0.30;
+                $calificadores['gerencia@gmail.com']['weight'] = 0.40;
+                $calificadores['produccionD@gmail.com']['weight'] = 0.30;
+            }
+            elseif ($oportunidad == 'poscosecha') {
+                $calificadores['innovaciontr@gmail.com']['weight'] = 0.30;
+                $calificadores['gerencia@gmail.com']['weight'] = 0.40;
+                $calificadores['poscosechaD@gmail.com']['weight'] = 0.30;
+            }
+            elseif ($oportunidad == 'gestion humana') {
+                $calificadores['innovaciontr@gmail.com']['weight'] = 0.30;
+                $calificadores['gerencia@gmail.com']['weight'] = 0.40;
+                $calificadores['gh@gmail.com']['weight'] = 0.30;
+            }
+        }
+    
+        // Filtrar solo los calificadores que tienen peso asignado
+        return array_filter($calificadores, function($data) {
+            return $data['weight'] > 0;
+        });
+    }
+
+    public function getRatingsForSurvey($surveyId) {
+        try {
+            $sql = "SELECT sr.deseable, sr.impacta_estrategia, sr.factible, sr.viable, sr.weight, u.email 
+                    FROM survey_ratings sr
+                    JOIN users u ON sr.user_id = u.id
+                    WHERE sr.survey_id = :surveyId";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['surveyId' => $surveyId]);
+            $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            return array_map(function($rating) {
+                // Obtener solo los valores que no son nulos
+                $valores = array_filter([
+                    $rating['deseable'],
+                    $rating['impacta_estrategia'],
+                    $rating['factible'],
+                    $rating['viable']
+                ], function($valor) {
+                    return $valor !== null;
+                });
+                
+                // Calcular el promedio dividiendo por el número de preguntas contestadas
+                $averageRating = count($valores) > 0 ? (array_sum($valores) / count($valores)) : 0;
+                
+                return [
+                    'email' => $rating['email'],
+                    'deseable' => $rating['deseable'],
+                    'impacta_estrategia' => $rating['impacta_estrategia'],
+                    'factible' => $rating['factible'],
+                    'viable' => $rating['viable'],
+                    'weight' => $rating['weight'],
+                    'average_rating' => round($averageRating, 2)
+                ];
+            }, $ratings);
+        } catch (PDOException $e) {
+            error_log("Error en getRatingsForSurvey: " . $e->getMessage());
+            throw new Exception("Error al obtener las calificaciones: " . $e->getMessage());
+        }
+    }
+
+    public function getFinalRating($surveyId) {
+        try {
+            $surveyInfo = $this->getSurveyById($surveyId);
+            $calificadores = $this->getCalificadores($surveyInfo['impacto'], $surveyInfo['area'], $surveyInfo['oportunidad']);
+            
+            $sql = "SELECT sr.*, u.email 
+                    FROM survey_ratings sr
+                    JOIN users u ON sr.user_id = u.id
+                    WHERE sr.survey_id = :surveyId";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['surveyId' => $surveyId]);
+            $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+            $weightedSum = 0;
+            $totalWeight = 0;
+    
+            foreach ($ratings as $rating) {
+                $weight = $calificadores[$rating['email']]['weight'] ?? 0;
+                
+                // Obtener solo los valores que no son nulos
+                $valores = array_filter([
+                    $rating['deseable'],
+                    $rating['impacta_estrategia'],
+                    $rating['factible'],
+                    $rating['viable']
+                ], function($valor) {
+                    return $valor !== null;
+                });
+                
+                // Calcular el promedio dividiendo por el número de preguntas contestadas
+                $avgRating = count($valores) > 0 ? (array_sum($valores) / count($valores)) : 0;
+                
+                $weightedSum += $avgRating * $weight;
+                $totalWeight += $weight;
+            }
+    
+            return $totalWeight > 0 ? round($weightedSum / $totalWeight, 2) : 0;
+        } catch (PDOException $e) {
+            error_log("Error en getFinalRating: " . $e->getMessage());
+            throw new Exception("Error al obtener la calificación final: " . $e->getMessage());
+        }
+    }
+    public function getAllSurveyRatings() {
+        try {
+            $stmt = $this->pdo->query("
+                SELECT s.id as surveyId, sr.user_id, sr.rating, sr.weight, u.email
+                FROM surveys s
+                LEFT JOIN survey_ratings sr ON s.id = sr.survey_id
+                LEFT JOIN users u ON sr.user_id = u.id
+                ORDER BY s.id
+            ");
+            
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            $ratingsData = [];
+            foreach ($results as $row) {
+                if (!isset($ratingsData[$row['surveyId']])) {
+                    $ratingsData[$row['surveyId']] = [
+                        'surveyId' => $row['surveyId'],
+                        'ratings' => [],
+                        'finalRating' => 0
+                    ];
+                }
+                
+                if ($row['user_id']) {
+                    $ratingsData[$row['surveyId']]['ratings'][] = [
+                        'email' => $row['email'],
+                        'rating' => floatval($row['rating']),
+                        'weight' => floatval($row['weight'])
+                    ];
+                }
+            }
+            
+            foreach ($ratingsData as &$survey) {
+                $totalWeightedRating = 0;
+                $totalWeight = 0;
+                foreach ($survey['ratings'] as $rating) {
+                    $totalWeightedRating += $rating['rating'] * $rating['weight'];
+                    $totalWeight += $rating['weight'];
+                }
+                $survey['finalRating'] = $totalWeight > 0 ? $totalWeightedRating / $totalWeight : 0;
+            }
+            
+            return array_values($ratingsData);
+        } catch (PDOException $e) {
+            error_log("Error en getAllSurveyRatings: " . $e->getMessage());
+            throw new Exception("Error al obtener las calificaciones de las encuestas: " . $e->getMessage());
+        }
+    }
+
+    public function getAllSurveysWithRatings($filters = []) {
+        $sql = "SELECT s.*, 
+                       COALESCE(AVG((sr.deseable + sr.impacta_estrategia + sr.factible + sr.viable) / 4), 0) as average_rating
+                FROM surveys s
+                LEFT JOIN survey_ratings sr ON s.id = sr.survey_id
+                WHERE 1=1";
+        
+        $params = [];
+    
+        if (!empty($filters['sede'])) {
+            $sql .= " AND s.sede = :sede";
+            $params[':sede'] = $filters['sede'];
+        }
+        if (!empty($filters['area'])) {
+            $sql .= " AND s.area = :area";
+            $params[':area'] = $filters['area'];
+        }
+        if (!empty($filters['initiative_type'])) {
+            $sql .= " AND s.initiative_type = :initiative_type";
+            $params[':initiative_type'] = $filters['initiative_type'];
+        }
+        if (!empty($filters['oportunidad'])) {
+            $sql .= " AND s.oportunidad = :oportunidad";
+            $params[':oportunidad'] = $filters['oportunidad'];
+        }
+        if (!empty($filters['impacto'])) {
+            $sql .= " AND s.impacto = :impacto";
+            $params[':impacto'] = $filters['impacto'];
+        }
+    
+        $sql .= " GROUP BY s.id, s.name, s.cedula, s.sede, s.area, s.initiative_type, s.oportunidad, s.impacto, s.specific_data, s.attachment_path
+                  ORDER BY s.id DESC";
+    
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($params);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
+    public function getUniqueSedes() {
+        $stmt = $this->pdo->query("SELECT DISTINCT sede FROM surveys ORDER BY sede");
+        return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }
+    
+    public function getUniqueAreas() {
+        $stmt = $this->pdo->query("SELECT DISTINCT area FROM surveys ORDER BY area");
+        return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }
+    
+    public function getUniqueOportunidades() {
+        $stmt = $this->pdo->query("SELECT DISTINCT oportunidad FROM surveys ORDER BY oportunidad");
+        return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }
+    
+    public function getUniqueImpactos() {
+        $stmt = $this->pdo->query("SELECT DISTINCT impacto FROM surveys ORDER BY impacto");
+        return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }
+
+    public function getStatsBySede() {
+        try {
+            $sql = "SELECT 
+                        sede,
+                        COUNT(*) as total_encuestas,
+                        SUM(CASE WHEN initiative_type = 'idea' THEN 1 ELSE 0 END) as ideas,
+                        SUM(CASE WHEN initiative_type = 'reto' THEN 1 ELSE 0 END) as retos,
+                        SUM(CASE WHEN initiative_type = 'problema' THEN 1 ELSE 0 END) as problemas
+                    FROM surveys
+                    GROUP BY sede
+                    ORDER BY sede";
+            
+            $stmt = $this->pdo->query($sql);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error en getStatsBySede: " . $e->getMessage());
+            throw new Exception("Error al obtener estadísticas por sede: " . $e->getMessage());
+        }
+    }
+    public function getUserRankingData() {
+        try {
+            $sql = "
+                WITH survey_counts AS (
+                    SELECT 
+                        name,
+                        cedula,
+                        COUNT(*) as total_ideas
+                    FROM surveys 
+                    GROUP BY name, cedula
+                )
+                SELECT 
+                    sc.name,
+                    sc.cedula,
+                    sc.total_ideas,
+                    COALESCE(up.participation_points, 0) as participation_points,
+                    COALESCE(up.impact_points, 0) as impact_points,
+                    up.comments,
+                    (sc.total_ideas + COALESCE(up.participation_points, 0) + COALESCE(up.impact_points, 0)) as total_points
+                FROM survey_counts sc
+                LEFT JOIN user_points up ON sc.cedula = up.user_cedula
+                ORDER BY total_points DESC, sc.total_ideas DESC";
+            
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error en getUserRankingData: " . $e->getMessage());
+            throw new Exception("Error al obtener datos del ranking: " . $e->getMessage());
+        }
+    }
+    
+    public function updateUserPoints($cedula, $participationPoints, $impactPoints, $comments) {
+        try {
+            $sql = "
+                INSERT INTO user_points (user_cedula, participation_points, impact_points, comments)
+                VALUES (:cedula, :participationPoints, :impactPoints, :comments)
+                ON CONFLICT (user_cedula) DO UPDATE SET
+                    participation_points = :participationPoints,
+                    impact_points = :impactPoints,
+                    comments = :comments,
+                    last_updated = CURRENT_TIMESTAMP";
+            
+            $stmt = $this->pdo->prepare($sql);
+            return $stmt->execute([
+                ':cedula' => $cedula,
+                ':participationPoints' => $participationPoints,
+                ':impactPoints' => $impactPoints,
+                ':comments' => $comments
+            ]);
+        } catch (PDOException $e) {
+            error_log("Error en updateUserPoints: " . $e->getMessage());
+            throw new Exception("Error al actualizar puntos: " . $e->getMessage());
+        }
+    }
+    public function getPointsStats() {
+        try {
+            $sql = "
+                WITH user_stats AS (
+                    SELECT 
+                        s.name,
+                        s.cedula,
+                        COUNT(*) as ideas_count,
+                        COALESCE(up.participation_points, 0) as participation_points,
+                        COALESCE(up.impact_points, 0) as impact_points
+                    FROM surveys s
+                    LEFT JOIN user_points up ON s.cedula = up.user_cedula
+                    GROUP BY s.name, s.cedula, up.participation_points, up.impact_points
+                )
+                SELECT 
+                    name,
+                    cedula,
+                    ideas_count,
+                    participation_points,
+                    impact_points,
+                    (ideas_count + participation_points + impact_points) as total_points
+                FROM user_stats
+                ORDER BY total_points DESC
+                LIMIT 10";
+                
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error en getPointsStats: " . $e->getMessage());
+            throw new Exception("Error al obtener estadísticas de puntos: " . $e->getMessage());
+        }
+    }
+
+    public function getTotalSurveys() {
+        $stmt = $this->pdo->query("SELECT COUNT(*) FROM surveys");
+        return $stmt->fetchColumn();
+    }
+
+    public function getTotalPrioritizedIdeas() {
+        try {
+            $sql = "SELECT COUNT(DISTINCT survey_id) FROM survey_ratings 
+                    WHERE deseable IS NOT NULL 
+                       OR impacta_estrategia IS NOT NULL 
+                       OR factible IS NOT NULL 
+                       OR viable IS NOT NULL";
+            $stmt = $this->pdo->query($sql);
+            return $stmt->fetchColumn();
+        } catch (PDOException $e) {
+            error_log("Error en getTotalPrioritizedIdeas: " . $e->getMessage());
+            return 0;
+        }
+    }
+}
+
+- User.php:
+
+<?php
+class User {
+    private $pdo;
+
+    public function __construct($pdo) {
+        $this->pdo = $pdo;
+    }
+
+    public function getUserById($userId) {
+        $stmt = $this->pdo->prepare("SELECT * FROM users WHERE id = :userId");
+        $stmt->execute(['userId' => $userId]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function login($emailOrUser, $password) {
+        error_log("Intentando autenticar: " . $emailOrUser);
+        
+        $stmt = $this->pdo->prepare("SELECT * FROM users WHERE email = :emailOrUser OR user = :emailOrUser");
+        $stmt->execute(['emailOrUser' => $emailOrUser]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+        error_log("Usuario encontrado en la base de datos: " . ($user ? 'Sí' : 'No'));
+    
+        if ($user) {
+            error_log("Verificando contraseña para: " . $emailOrUser);
+            
+            // Comparación directa si la contraseña está en texto plano
+            if ($password === $user['password']) {
+                error_log("Contraseña correcta para: " . $emailOrUser);
+                return $user;
+            } else {
+                error_log("Contraseña incorrecta para: " . $emailOrUser);
+            }
+        } else {
+            error_log("Usuario no encontrado: " . $emailOrUser);
+        }
+        return false;
+    }
+}
