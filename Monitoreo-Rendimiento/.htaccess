@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /L_Siembra/
+
+    # Redirigir la raíz al detector
+    RewriteRule ^$ frontend/views/detector.html [L]
+
+    # Permitir acceso directo a archivos existentes
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Redirigir rutas específicas
+    RewriteRule ^frontend/views/ - [L]
+    RewriteRule ^backend/ - [L]
+    RewriteRule ^assets/ - [L]
+
+    # Prevenir acceso directo a ciertos directorios
+    RewriteRule ^config/ - [F]
+    RewriteRule ^logs/ - [F]
+</IfModule>
+
+# Configuración de CORS
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>

@@ -1,0 +1,903 @@
+2024-12-05 09:42:53 - INFO - Sistema de logging inicializado
+2024-12-05 09:42:53 - INFO - === Iniciando sistema de detección ===
+2024-12-05 09:42:53 - INFO - Directorio creado/verificado: C:\xampp\htdocs\L_Siembra\backend/data/config
+2024-12-05 09:42:53 - INFO - Directorio creado/verificado: C:\xampp\htdocs\L_Siembra\backend/logs
+2024-12-05 09:42:53 - INFO - Directorio creado/verificado: C:\xampp\htdocs\L_Siembra\tmp
+2024-12-05 09:42:53 - INFO - Iniciando carga del modelo YOLO...
+2024-12-05 09:42:53 - INFO - Intentando cargar modelo desde caché...
+2024-12-05 09:42:56 - INFO - Modelo cargado exitosamente desde caché
+2024-12-05 09:42:56 - INFO - Modelo YOLO cargado exitosamente
+2024-12-05 09:42:56 - INFO - Modelo cargado exitosamente
+2024-12-05 09:42:56 - INFO - Iniciando cámara...
+2024-12-05 09:42:56 - INFO - Intentando abrir cámara 1 con backend 700
+2024-12-05 09:42:59 - INFO - Cámara inicializada exitosamente: índice=1, backend=700
+2024-12-05 09:42:59 - INFO - Cámara inicializada exitosamente
+2024-12-05 09:42:59 - INFO - Archivo de inicialización creado: C:\xampp\htdocs\L_Siembra\tmp/detection_initialized.txt
+2024-12-05 09:42:59 - INFO - Configuración cargada correctamente
+2024-12-05 09:42:59 - INFO - Estado de detección inicializado correctamente
+2024-12-05 09:42:59 - INFO - Configurando interfaz gráfica...
+2024-12-05 09:43:00 - INFO - Interfaz gráfica configurada
+2024-12-05 09:43:00 - INFO - Interfaz gráfica configurada
+2024-12-05 09:43:00 - INFO - Iniciando thread de procesamiento de video...
+2024-12-05 09:43:00 - INFO - Iniciando procesamiento de video
+2024-12-05 09:43:00 - INFO - Estado inicial de la cámara: True
+2024-12-05 09:43:00 - INFO - Propiedades de la cámara:
+2024-12-05 09:43:00 - INFO - - FPS: 30.00003000003
+2024-12-05 09:43:00 - INFO - - Resolución: 1280.0x720.0
+2024-12-05 09:43:00 - INFO - Inicializando FrameProcessor
+2024-12-05 09:43:00 - INFO - Thread de procesamiento de video iniciado
+2024-12-05 09:43:00 - INFO - Tracking de tiempo iniciado
+2024-12-05 09:43:00 - INFO - Nombres cargados: 13 registros
+2024-12-05 09:43:00 - INFO - Trackers inicializados correctamente
+2024-12-05 09:43:00 - INFO - Ventana de visualización creada correctamente
+2024-12-05 09:43:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-05 09:43:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-05 09:43:03 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-05 09:43:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-05 09:43:05 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-05 09:43:06 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-05 09:43:07 - INFO - FPS promedio: 14.60
+2024-12-05 09:43:07 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-05 09:43:08 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-05 09:43:09 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-05 09:43:10 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-05 09:43:11 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-05 09:43:12 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-05 09:43:13 - INFO - FPS promedio: 15.09
+2024-12-05 09:43:13 - INFO - Nueva detección - Clase: puzzle, Persona: Garzon Garcia Maria Eugenia, ID: 1
+2024-12-05 09:43:13 - INFO - Actualizado conteo para puzzle: 1
+2024-12-05 09:43:13 - INFO - Archivo de estado actualizado
+2024-12-05 09:43:13 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:43:14 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 1})
+2024-12-05 09:43:15 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 1})
+2024-12-05 09:43:16 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 1})
+2024-12-05 09:43:16 - INFO - Nueva detección - Clase: puzzle, Persona: Garzon Garcia Maria Eugenia, ID: 2
+2024-12-05 09:43:16 - INFO - Actualizado conteo para puzzle: 2
+2024-12-05 09:43:16 - INFO - Archivo de estado actualizado
+2024-12-05 09:43:16 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:43:17 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2})
+2024-12-05 09:43:18 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2})
+2024-12-05 09:43:19 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2})
+2024-12-05 09:43:20 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2})
+2024-12-05 09:43:20 - INFO - FPS promedio: 14.90
+2024-12-05 09:43:20 - INFO - Nueva detección - Clase: umbrella, Persona: Molano Ramirez Johana Alexandra, ID: 3
+2024-12-05 09:43:20 - INFO - Actualizado conteo para umbrella: 1
+2024-12-05 09:43:20 - INFO - Archivo de estado actualizado
+2024-12-05 09:43:20 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:43:21 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1})
+2024-12-05 09:43:22 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1})
+2024-12-05 09:43:23 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1})
+2024-12-05 09:43:24 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1})
+2024-12-05 09:43:25 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1})
+2024-12-05 09:43:26 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1})
+2024-12-05 09:43:28 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1})
+2024-12-05 09:43:28 - INFO - FPS promedio: 14.26
+2024-12-05 09:43:29 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1})
+2024-12-05 09:43:30 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1})
+2024-12-05 09:43:30 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 6
+2024-12-05 09:43:30 - INFO - Actualizado conteo para flower: 1
+2024-12-05 09:43:30 - INFO - Archivo de estado actualizado
+2024-12-05 09:43:30 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:43:31 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 1})
+2024-12-05 09:43:31 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 7
+2024-12-05 09:43:31 - INFO - Actualizado conteo para flower: 2
+2024-12-05 09:43:31 - INFO - Archivo de estado actualizado
+2024-12-05 09:43:31 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:43:32 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 2})
+2024-12-05 09:43:33 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 2})
+2024-12-05 09:43:33 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 8
+2024-12-05 09:43:33 - INFO - Actualizado conteo para flower: 3
+2024-12-05 09:43:33 - INFO - Archivo de estado actualizado
+2024-12-05 09:43:33 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 3, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:43:34 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 3})
+2024-12-05 09:43:35 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 3})
+2024-12-05 09:43:36 - INFO - FPS promedio: 13.97
+2024-12-05 09:43:36 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 3})
+2024-12-05 09:43:37 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 9
+2024-12-05 09:43:37 - INFO - Actualizado conteo para flower: 4
+2024-12-05 09:43:37 - INFO - Archivo de estado actualizado
+2024-12-05 09:43:37 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 4, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:43:37 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:38 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:39 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:41 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:42 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:43 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:43 - INFO - FPS promedio: 13.89
+2024-12-05 09:43:44 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:45 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:46 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:47 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:48 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:49 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:50 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:51 - INFO - FPS promedio: 13.76
+2024-12-05 09:43:51 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:52 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:53 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:55 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:56 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:57 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:58 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 4})
+2024-12-05 09:43:58 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 15
+2024-12-05 09:43:58 - INFO - Actualizado conteo para flower: 5
+2024-12-05 09:43:58 - INFO - Archivo de estado actualizado
+2024-12-05 09:43:58 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 5, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:43:59 - INFO - FPS promedio: 13.61
+2024-12-05 09:43:59 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:00 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:03 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:05 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:06 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:07 - INFO - FPS promedio: 13.50
+2024-12-05 09:44:08 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:09 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:10 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:11 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:12 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 5})
+2024-12-05 09:44:13 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 21
+2024-12-05 09:44:13 - INFO - Actualizado conteo para flower: 6
+2024-12-05 09:44:13 - INFO - Archivo de estado actualizado
+2024-12-05 09:44:13 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:44:13 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 6})
+2024-12-05 09:44:14 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 6})
+2024-12-05 09:44:15 - INFO - FPS promedio: 13.39
+2024-12-05 09:44:15 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 6})
+2024-12-05 09:44:16 - INFO - Nueva detección - Clase: magnet, Persona: Hernandez Gutierrez Viviana Patricia, ID: 26
+2024-12-05 09:44:16 - INFO - Actualizado conteo para magnet: 1
+2024-12-05 09:44:16 - INFO - Archivo de estado actualizado
+2024-12-05 09:44:16 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:44:16 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 6, 'magnet': 1})
+2024-12-05 09:44:17 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 6, 'magnet': 1})
+2024-12-05 09:44:19 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 6, 'magnet': 1})
+2024-12-05 09:44:20 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 6, 'magnet': 1})
+2024-12-05 09:44:21 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 6, 'magnet': 1})
+2024-12-05 09:44:22 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 6, 'magnet': 1})
+2024-12-05 09:44:23 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 6, 'magnet': 1})
+2024-12-05 09:44:24 - INFO - FPS promedio: 13.08
+2024-12-05 09:44:24 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 6, 'magnet': 1})
+2024-12-05 09:44:25 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 6, 'magnet': 1})
+2024-12-05 09:44:26 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 29
+2024-12-05 09:44:26 - INFO - Actualizado conteo para flower: 7
+2024-12-05 09:44:26 - INFO - Archivo de estado actualizado
+2024-12-05 09:44:26 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:44:26 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 1})
+2024-12-05 09:44:27 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 1})
+2024-12-05 09:44:28 - INFO - Nueva detección - Clase: magnet, Persona: Hernandez Gutierrez Viviana Patricia, ID: 30
+2024-12-05 09:44:28 - INFO - Actualizado conteo para magnet: 2
+2024-12-05 09:44:28 - INFO - Archivo de estado actualizado
+2024-12-05 09:44:28 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:44:29 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 2})
+2024-12-05 09:44:30 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 2})
+2024-12-05 09:44:31 - INFO - Nueva detección - Clase: magnet, Persona: Hernandez Gutierrez Viviana Patricia, ID: 31
+2024-12-05 09:44:31 - INFO - Actualizado conteo para magnet: 3
+2024-12-05 09:44:31 - INFO - Archivo de estado actualizado
+2024-12-05 09:44:31 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 3, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:44:31 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 3})
+2024-12-05 09:44:32 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 3})
+2024-12-05 09:44:33 - INFO - FPS promedio: 12.94
+2024-12-05 09:44:33 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 3})
+2024-12-05 09:44:33 - INFO - Nueva detección - Clase: magnet, Persona: Hernandez Gutierrez Viviana Patricia, ID: 33
+2024-12-05 09:44:33 - INFO - Actualizado conteo para magnet: 4
+2024-12-05 09:44:33 - INFO - Archivo de estado actualizado
+2024-12-05 09:44:33 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 4, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:44:34 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 4})
+2024-12-05 09:44:35 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 4})
+2024-12-05 09:44:36 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 4})
+2024-12-05 09:44:37 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 4})
+2024-12-05 09:44:38 - INFO - Nueva detección - Clase: magnet, Persona: Hernandez Gutierrez Viviana Patricia, ID: 35
+2024-12-05 09:44:38 - INFO - Actualizado conteo para magnet: 5
+2024-12-05 09:44:38 - INFO - Archivo de estado actualizado
+2024-12-05 09:44:38 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 5, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:44:38 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 5})
+2024-12-05 09:44:39 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 5})
+2024-12-05 09:44:40 - INFO - FPS promedio: 12.94
+2024-12-05 09:44:41 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 5})
+2024-12-05 09:44:42 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 5})
+2024-12-05 09:44:43 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 5})
+2024-12-05 09:44:44 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 7, 'magnet': 5})
+2024-12-05 09:44:44 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 36
+2024-12-05 09:44:44 - INFO - Actualizado conteo para flower: 8
+2024-12-05 09:44:44 - INFO - Archivo de estado actualizado
+2024-12-05 09:44:44 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 5, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 8, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:44:45 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 8, 'magnet': 5})
+2024-12-05 09:44:46 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 8, 'magnet': 5})
+2024-12-05 09:44:47 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 8, 'magnet': 5})
+2024-12-05 09:44:48 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 8, 'magnet': 5})
+2024-12-05 09:44:49 - INFO - FPS promedio: 12.90
+2024-12-05 09:44:49 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 8, 'magnet': 5})
+2024-12-05 09:44:50 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 8, 'magnet': 5})
+2024-12-05 09:44:51 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 8, 'magnet': 5})
+2024-12-05 09:44:53 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 8, 'magnet': 5})
+2024-12-05 09:44:54 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 8, 'magnet': 5})
+2024-12-05 09:44:55 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 39
+2024-12-05 09:44:55 - INFO - Actualizado conteo para flower: 9
+2024-12-05 09:44:55 - INFO - Archivo de estado actualizado
+2024-12-05 09:44:55 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 5, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 9, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:44:55 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 9, 'magnet': 5})
+2024-12-05 09:44:55 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 40
+2024-12-05 09:44:55 - INFO - Actualizado conteo para flower: 10
+2024-12-05 09:44:55 - INFO - Archivo de estado actualizado
+2024-12-05 09:44:55 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 5, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:44:56 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 41
+2024-12-05 09:44:56 - INFO - Actualizado conteo para flower: 11
+2024-12-05 09:44:56 - INFO - Archivo de estado actualizado
+2024-12-05 09:44:56 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 5, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 11, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:44:56 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 11, 'magnet': 5})
+2024-12-05 09:44:57 - INFO - FPS promedio: 12.87
+2024-12-05 09:44:57 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 11, 'magnet': 5})
+2024-12-05 09:44:58 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 11, 'magnet': 5})
+2024-12-05 09:44:59 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 11, 'magnet': 5})
+2024-12-05 09:45:00 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 11, 'magnet': 5})
+2024-12-05 09:45:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 11, 'magnet': 5})
+2024-12-05 09:45:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 11, 'magnet': 5})
+2024-12-05 09:45:03 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 47
+2024-12-05 09:45:03 - INFO - Actualizado conteo para flower: 12
+2024-12-05 09:45:03 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:03 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 5, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 12, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:03 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 12, 'magnet': 5})
+2024-12-05 09:45:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 12, 'magnet': 5})
+2024-12-05 09:45:05 - INFO - FPS promedio: 12.82
+2024-12-05 09:45:06 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 12, 'magnet': 5})
+2024-12-05 09:45:06 - INFO - Nueva detección - Clase: magnet, Persona: Hernandez Gutierrez Viviana Patricia, ID: 50
+2024-12-05 09:45:06 - INFO - Actualizado conteo para magnet: 6
+2024-12-05 09:45:06 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:06 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 12, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:07 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 12, 'magnet': 6})
+2024-12-05 09:45:08 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 12, 'magnet': 6})
+2024-12-05 09:45:09 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 12, 'magnet': 6})
+2024-12-05 09:45:10 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 12, 'magnet': 6})
+2024-12-05 09:45:11 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 51
+2024-12-05 09:45:11 - INFO - Actualizado conteo para flower: 13
+2024-12-05 09:45:11 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:11 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 13, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:11 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 13, 'magnet': 6})
+2024-12-05 09:45:12 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 52
+2024-12-05 09:45:12 - INFO - Actualizado conteo para flower: 14
+2024-12-05 09:45:12 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:12 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 14, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:12 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 14, 'magnet': 6})
+2024-12-05 09:45:13 - INFO - Nueva detección - Clase: magnet, Persona: Hernandez Gutierrez Viviana Patricia, ID: 53
+2024-12-05 09:45:13 - INFO - Actualizado conteo para magnet: 7
+2024-12-05 09:45:13 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:13 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 14, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:13 - INFO - FPS promedio: 12.77
+2024-12-05 09:45:13 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 14, 'magnet': 7})
+2024-12-05 09:45:14 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 14, 'magnet': 7})
+2024-12-05 09:45:15 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 14, 'magnet': 7})
+2024-12-05 09:45:16 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 55
+2024-12-05 09:45:16 - INFO - Actualizado conteo para flower: 15
+2024-12-05 09:45:16 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:16 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 15, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:16 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 15, 'magnet': 7})
+2024-12-05 09:45:17 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 56
+2024-12-05 09:45:17 - INFO - Actualizado conteo para flower: 16
+2024-12-05 09:45:17 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:17 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 16, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:18 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 16, 'magnet': 7})
+2024-12-05 09:45:19 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 16, 'magnet': 7})
+2024-12-05 09:45:20 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 16, 'magnet': 7})
+2024-12-05 09:45:21 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 57
+2024-12-05 09:45:21 - INFO - Actualizado conteo para flower: 17
+2024-12-05 09:45:21 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:21 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 17, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:21 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 17, 'magnet': 7})
+2024-12-05 09:45:21 - INFO - FPS promedio: 12.74
+2024-12-05 09:45:22 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 17, 'magnet': 7})
+2024-12-05 09:45:23 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 17, 'magnet': 7})
+2024-12-05 09:45:24 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 17, 'magnet': 7})
+2024-12-05 09:45:25 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 17, 'magnet': 7})
+2024-12-05 09:45:26 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 17, 'magnet': 7})
+2024-12-05 09:45:27 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 17, 'magnet': 7})
+2024-12-05 09:45:28 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 58
+2024-12-05 09:45:28 - INFO - Actualizado conteo para flower: 18
+2024-12-05 09:45:28 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:28 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 18, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:29 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 18, 'magnet': 7})
+2024-12-05 09:45:30 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 18, 'magnet': 7})
+2024-12-05 09:45:30 - INFO - FPS promedio: 12.67
+2024-12-05 09:45:31 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 18, 'magnet': 7})
+2024-12-05 09:45:32 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 18, 'magnet': 7})
+2024-12-05 09:45:33 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 18, 'magnet': 7})
+2024-12-05 09:45:34 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 18, 'magnet': 7})
+2024-12-05 09:45:34 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 61
+2024-12-05 09:45:34 - INFO - Actualizado conteo para flower: 19
+2024-12-05 09:45:34 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:34 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 19, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:35 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 19, 'magnet': 7})
+2024-12-05 09:45:36 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 19, 'magnet': 7})
+2024-12-05 09:45:37 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 62
+2024-12-05 09:45:37 - INFO - Actualizado conteo para flower: 20
+2024-12-05 09:45:37 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:37 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 20, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:37 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 20, 'magnet': 7})
+2024-12-05 09:45:38 - INFO - FPS promedio: 12.63
+2024-12-05 09:45:38 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 20, 'magnet': 7})
+2024-12-05 09:45:39 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 20, 'magnet': 7})
+2024-12-05 09:45:41 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 20, 'magnet': 7})
+2024-12-05 09:45:42 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 20, 'magnet': 7})
+2024-12-05 09:45:43 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 20, 'magnet': 7})
+2024-12-05 09:45:44 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 64
+2024-12-05 09:45:44 - INFO - Actualizado conteo para flower: 21
+2024-12-05 09:45:44 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:44 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 21, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:44 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 21, 'magnet': 7})
+2024-12-05 09:45:45 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 21, 'magnet': 7})
+2024-12-05 09:45:46 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 21, 'magnet': 7})
+2024-12-05 09:45:47 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 66
+2024-12-05 09:45:47 - INFO - Actualizado conteo para flower: 22
+2024-12-05 09:45:47 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:47 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 22, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:47 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 22, 'magnet': 7})
+2024-12-05 09:45:48 - INFO - FPS promedio: 12.53
+2024-12-05 09:45:48 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 22, 'magnet': 7})
+2024-12-05 09:45:50 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 22, 'magnet': 7})
+2024-12-05 09:45:50 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 68
+2024-12-05 09:45:50 - INFO - Actualizado conteo para flower: 23
+2024-12-05 09:45:50 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:50 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 23, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:51 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 23, 'magnet': 7})
+2024-12-05 09:45:52 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 23, 'magnet': 7})
+2024-12-05 09:45:53 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 23, 'magnet': 7})
+2024-12-05 09:45:54 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 23, 'magnet': 7})
+2024-12-05 09:45:55 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 23, 'magnet': 7})
+2024-12-05 09:45:56 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 23, 'magnet': 7})
+2024-12-05 09:45:56 - INFO - FPS promedio: 12.48
+2024-12-05 09:45:57 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 23, 'magnet': 7})
+2024-12-05 09:45:58 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 71
+2024-12-05 09:45:58 - INFO - Actualizado conteo para flower: 24
+2024-12-05 09:45:58 - INFO - Archivo de estado actualizado
+2024-12-05 09:45:58 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 24, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:45:58 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:45:59 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:03 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:05 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:05 - INFO - FPS promedio: 12.43
+2024-12-05 09:46:06 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:07 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:08 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:09 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:10 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:12 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:13 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:13 - INFO - FPS promedio: 12.41
+2024-12-05 09:46:14 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:15 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:16 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:17 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:18 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:19 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:20 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:21 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:22 - INFO - FPS promedio: 12.39
+2024-12-05 09:46:22 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:24 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:25 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:26 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:27 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:28 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:29 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:30 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:30 - INFO - FPS promedio: 12.36
+2024-12-05 09:46:31 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 24, 'magnet': 7})
+2024-12-05 09:46:31 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 75
+2024-12-05 09:46:31 - INFO - Actualizado conteo para flower: 25
+2024-12-05 09:46:31 - INFO - Archivo de estado actualizado
+2024-12-05 09:46:31 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 25, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:46:32 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 25, 'magnet': 7})
+2024-12-05 09:46:33 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 25, 'magnet': 7})
+2024-12-05 09:46:34 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 76
+2024-12-05 09:46:34 - INFO - Actualizado conteo para flower: 26
+2024-12-05 09:46:34 - INFO - Archivo de estado actualizado
+2024-12-05 09:46:34 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 26, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:46:34 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 26, 'magnet': 7})
+2024-12-05 09:46:36 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 26, 'magnet': 7})
+2024-12-05 09:46:37 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 26, 'magnet': 7})
+2024-12-05 09:46:37 - INFO - Nueva detección - Clase: women, Persona: Lopez Garay Emilse, ID: 77
+2024-12-05 09:46:37 - INFO - Actualizado conteo para women: 1
+2024-12-05 09:46:37 - INFO - Archivo de estado actualizado
+2024-12-05 09:46:37 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 26, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:46:38 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 26, 'magnet': 7, 'women': 1})
+2024-12-05 09:46:39 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 26, 'magnet': 7, 'women': 1})
+2024-12-05 09:46:39 - INFO - FPS promedio: 12.33
+2024-12-05 09:46:40 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 26, 'magnet': 7, 'women': 1})
+2024-12-05 09:46:41 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 26, 'magnet': 7, 'women': 1})
+2024-12-05 09:46:42 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 26, 'magnet': 7, 'women': 1})
+2024-12-05 09:46:43 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 26, 'magnet': 7, 'women': 1})
+2024-12-05 09:46:44 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 79
+2024-12-05 09:46:44 - INFO - Actualizado conteo para flower: 27
+2024-12-05 09:46:44 - INFO - Archivo de estado actualizado
+2024-12-05 09:46:44 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 27, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:46:44 - INFO - Nueva detección - Clase: women, Persona: Lopez Garay Emilse, ID: 80
+2024-12-05 09:46:44 - INFO - Actualizado conteo para women: 2
+2024-12-05 09:46:44 - INFO - Archivo de estado actualizado
+2024-12-05 09:46:44 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 27, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:46:44 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 27, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:45 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 81
+2024-12-05 09:46:45 - INFO - Actualizado conteo para flower: 28
+2024-12-05 09:46:45 - INFO - Archivo de estado actualizado
+2024-12-05 09:46:45 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 28, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:46:45 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 28, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:47 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 28, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:48 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 28, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:48 - INFO - FPS promedio: 12.29
+2024-12-05 09:46:49 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 28, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:50 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 28, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:51 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 28, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:52 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 28, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:53 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 82
+2024-12-05 09:46:53 - INFO - Actualizado conteo para flower: 29
+2024-12-05 09:46:53 - INFO - Archivo de estado actualizado
+2024-12-05 09:46:53 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 29, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:46:53 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 29, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:54 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 29, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:55 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 29, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:56 - INFO - FPS promedio: 12.27
+2024-12-05 09:46:56 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 29, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:57 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 83
+2024-12-05 09:46:57 - INFO - Actualizado conteo para flower: 30
+2024-12-05 09:46:57 - INFO - Archivo de estado actualizado
+2024-12-05 09:46:57 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 30, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:46:58 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 30, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:59 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 30, 'magnet': 7, 'women': 2})
+2024-12-05 09:46:59 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 84
+2024-12-05 09:46:59 - INFO - Actualizado conteo para flower: 31
+2024-12-05 09:46:59 - INFO - Archivo de estado actualizado
+2024-12-05 09:46:59 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 31, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:46:59 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 85
+2024-12-05 09:46:59 - INFO - Actualizado conteo para flower: 32
+2024-12-05 09:46:59 - INFO - Archivo de estado actualizado
+2024-12-05 09:46:59 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 32, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:47:00 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 32, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:00 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 86
+2024-12-05 09:47:00 - INFO - Actualizado conteo para flower: 33
+2024-12-05 09:47:00 - INFO - Archivo de estado actualizado
+2024-12-05 09:47:00 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 33, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:47:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 33, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 33, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:02 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 88
+2024-12-05 09:47:02 - INFO - Actualizado conteo para flower: 34
+2024-12-05 09:47:02 - INFO - Archivo de estado actualizado
+2024-12-05 09:47:02 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 34, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:47:03 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 89
+2024-12-05 09:47:03 - INFO - Actualizado conteo para flower: 35
+2024-12-05 09:47:03 - INFO - Archivo de estado actualizado
+2024-12-05 09:47:03 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 35, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:47:03 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 91
+2024-12-05 09:47:03 - INFO - Actualizado conteo para flower: 36
+2024-12-05 09:47:03 - INFO - Archivo de estado actualizado
+2024-12-05 09:47:03 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 7, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 36, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:47:03 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:05 - INFO - FPS promedio: 12.24
+2024-12-05 09:47:05 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:06 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:08 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:09 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:10 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:11 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:12 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:13 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:14 - INFO - FPS promedio: 12.23
+2024-12-05 09:47:14 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:15 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 7, 'women': 2})
+2024-12-05 09:47:16 - INFO - Nueva detección - Clase: magnet, Persona: Hernandez Gutierrez Viviana Patricia, ID: 93
+2024-12-05 09:47:16 - INFO - Actualizado conteo para magnet: 8
+2024-12-05 09:47:16 - INFO - Archivo de estado actualizado
+2024-12-05 09:47:16 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 8, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 36, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:47:17 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 8, 'women': 2})
+2024-12-05 09:47:18 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 8, 'women': 2})
+2024-12-05 09:47:19 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 8, 'women': 2})
+2024-12-05 09:47:20 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 8, 'women': 2})
+2024-12-05 09:47:21 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 8, 'women': 2})
+2024-12-05 09:47:22 - INFO - FPS promedio: 12.22
+2024-12-05 09:47:22 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 8, 'women': 2})
+2024-12-05 09:47:23 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 8, 'women': 2})
+2024-12-05 09:47:24 - INFO - Nueva detección - Clase: magnet, Persona: Hernandez Gutierrez Viviana Patricia, ID: 94
+2024-12-05 09:47:24 - INFO - Actualizado conteo para magnet: 9
+2024-12-05 09:47:24 - INFO - Archivo de estado actualizado
+2024-12-05 09:47:24 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:24 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 9, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 36, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:47:25 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:26 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:28 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:29 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:30 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:31 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:31 - INFO - FPS promedio: 12.16
+2024-12-05 09:47:32 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:33 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:34 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:35 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:36 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:37 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:39 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:40 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:40 - INFO - FPS promedio: 12.15
+2024-12-05 09:47:41 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:42 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:43 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:44 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:45 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:46 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:47 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:48 - INFO - FPS promedio: 12.15
+2024-12-05 09:47:49 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:50 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:51 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:52 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:53 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:54 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:55 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:56 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:57 - INFO - FPS promedio: 12.13
+2024-12-05 09:47:57 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:47:58 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:48:00 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:48:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:48:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:48:03 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:48:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:48:05 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:48:05 - INFO - FPS promedio: 12.12
+2024-12-05 09:48:06 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:48:07 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:48:08 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 9, 'women': 2})
+2024-12-05 09:48:09 - INFO - Nueva detección - Clase: magnet, Persona: Hernandez Gutierrez Viviana Patricia, ID: 95
+2024-12-05 09:48:09 - INFO - Actualizado conteo para magnet: 10
+2024-12-05 09:48:09 - INFO - Archivo de estado actualizado
+2024-12-05 09:48:09 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 36, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:48:09 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:11 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:12 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:13 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:14 - INFO - FPS promedio: 12.12
+2024-12-05 09:48:14 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:15 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:16 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:17 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:18 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:19 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:21 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:22 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:22 - INFO - FPS promedio: 12.11
+2024-12-05 09:48:23 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:24 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:25 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:26 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:27 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:28 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2})
+2024-12-05 09:48:29 - INFO - Nueva detección - Clase: qr, Persona: Ceballos Marin Nidian Yaneth, ID: 97
+2024-12-05 09:48:29 - INFO - Actualizado conteo para qr: 1
+2024-12-05 09:48:29 - INFO - Archivo de estado actualizado
+2024-12-05 09:48:29 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 36, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:48:29 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:30 - INFO - FPS promedio: 12.11
+2024-12-05 09:48:30 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:32 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:33 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:34 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:35 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:36 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:37 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:38 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:39 - INFO - FPS promedio: 12.09
+2024-12-05 09:48:40 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:41 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:42 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:43 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:44 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:45 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:46 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:47 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:47 - INFO - FPS promedio: 12.09
+2024-12-05 09:48:48 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:50 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:51 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:52 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:53 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:54 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:55 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:56 - INFO - FPS promedio: 12.09
+2024-12-05 09:48:56 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:57 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:48:58 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:00 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:03 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:04 - INFO - FPS promedio: 12.08
+2024-12-05 09:49:05 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:06 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:07 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:08 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:09 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:11 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:12 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:13 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:13 - INFO - FPS promedio: 12.06
+2024-12-05 09:49:14 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:15 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:16 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:17 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:18 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:19 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:21 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:21 - INFO - FPS promedio: 12.06
+2024-12-05 09:49:22 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:23 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:24 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:25 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:26 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:27 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1})
+2024-12-05 09:49:28 - INFO - Nueva detección - Clase: x, Persona: Sanchez Jaramillo Maria Cecilia, ID: 98
+2024-12-05 09:49:28 - INFO - Actualizado conteo para x: 1
+2024-12-05 09:49:28 - INFO - Archivo de estado actualizado
+2024-12-05 09:49:28 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 36, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:49:28 - INFO - Nueva detección - Clase: x, Persona: Sanchez Jaramillo Maria Cecilia, ID: 99
+2024-12-05 09:49:28 - INFO - Actualizado conteo para x: 2
+2024-12-05 09:49:28 - INFO - Archivo de estado actualizado
+2024-12-05 09:49:28 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 36, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:49:28 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:29 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:30 - INFO - FPS promedio: 12.05
+2024-12-05 09:49:31 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:32 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:33 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:34 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:35 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:36 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:37 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:38 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:39 - INFO - FPS promedio: 12.04
+2024-12-05 09:49:40 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:41 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:42 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:43 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:44 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:45 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:46 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:47 - INFO - FPS promedio: 12.03
+2024-12-05 09:49:47 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:49 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:50 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:51 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:52 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:53 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 36, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:54 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 100
+2024-12-05 09:49:54 - INFO - Actualizado conteo para flower: 37
+2024-12-05 09:49:54 - INFO - Archivo de estado actualizado
+2024-12-05 09:49:54 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 37, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:49:54 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 37, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:55 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 37, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:56 - INFO - FPS promedio: 12.01
+2024-12-05 09:49:56 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 37, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:58 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 37, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 2})
+2024-12-05 09:49:58 - INFO - Nueva detección - Clase: x, Persona: Sanchez Jaramillo Maria Cecilia, ID: 103
+2024-12-05 09:49:58 - INFO - Actualizado conteo para x: 3
+2024-12-05 09:49:58 - INFO - Archivo de estado actualizado
+2024-12-05 09:49:58 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 37, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 3, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:49:59 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 37, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 3})
+2024-12-05 09:50:00 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 37, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 3})
+2024-12-05 09:50:00 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 104
+2024-12-05 09:50:00 - INFO - Actualizado conteo para flower: 38
+2024-12-05 09:50:00 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:00 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 38, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 3, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 38, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 3})
+2024-12-05 09:50:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 38, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 3})
+2024-12-05 09:50:03 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 38, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 3})
+2024-12-05 09:50:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 38, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 3})
+2024-12-05 09:50:05 - INFO - FPS promedio: 12.00
+2024-12-05 09:50:05 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 38, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 3})
+2024-12-05 09:50:06 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 105
+2024-12-05 09:50:06 - INFO - Actualizado conteo para flower: 39
+2024-12-05 09:50:06 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:06 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 39, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 3, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:06 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 39, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 3})
+2024-12-05 09:50:07 - INFO - Nueva detección - Clase: x, Persona: Sanchez Jaramillo Maria Cecilia, ID: 106
+2024-12-05 09:50:07 - INFO - Actualizado conteo para x: 4
+2024-12-05 09:50:07 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:07 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 39, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 4, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:08 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 39, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 4})
+2024-12-05 09:50:09 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 39, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 4})
+2024-12-05 09:50:09 - INFO - Nueva detección - Clase: x, Persona: Sanchez Jaramillo Maria Cecilia, ID: 109
+2024-12-05 09:50:09 - INFO - Actualizado conteo para x: 5
+2024-12-05 09:50:09 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:09 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 39, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 5, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:10 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 39, 'magnet': 10, 'women': 2, 'qr': 1, 'x': 5})
+2024-12-05 09:50:10 - INFO - Nueva detección - Clase: qr, Persona: Ceballos Marin Nidian Yaneth, ID: 110
+2024-12-05 09:50:10 - INFO - Actualizado conteo para qr: 2
+2024-12-05 09:50:10 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:10 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 39, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 5, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:11 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 111
+2024-12-05 09:50:11 - INFO - Actualizado conteo para flower: 40
+2024-12-05 09:50:11 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:11 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 40, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 5, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:11 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 40, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 5})
+2024-12-05 09:50:12 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 40, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 5})
+2024-12-05 09:50:12 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 112
+2024-12-05 09:50:12 - INFO - Actualizado conteo para flower: 41
+2024-12-05 09:50:12 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:12 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 41, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 5, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:13 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 41, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 5})
+2024-12-05 09:50:14 - INFO - FPS promedio: 11.98
+2024-12-05 09:50:14 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 41, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 5})
+2024-12-05 09:50:15 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 41, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 5})
+2024-12-05 09:50:17 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 41, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 5})
+2024-12-05 09:50:18 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 41, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 5})
+2024-12-05 09:50:19 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 41, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 5})
+2024-12-05 09:50:20 - INFO - Nueva detección - Clase: x, Persona: Sanchez Jaramillo Maria Cecilia, ID: 113
+2024-12-05 09:50:20 - INFO - Actualizado conteo para x: 6
+2024-12-05 09:50:20 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:20 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 41, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:20 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 41, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:20 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 115
+2024-12-05 09:50:20 - INFO - Actualizado conteo para flower: 42
+2024-12-05 09:50:20 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:20 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 42, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:21 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 42, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:21 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 117
+2024-12-05 09:50:21 - INFO - Actualizado conteo para flower: 43
+2024-12-05 09:50:21 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:21 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 43, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:22 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 43, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:23 - INFO - FPS promedio: 11.97
+2024-12-05 09:50:23 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 118
+2024-12-05 09:50:23 - INFO - Actualizado conteo para flower: 44
+2024-12-05 09:50:23 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:23 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 44, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:23 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 44, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:24 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 119
+2024-12-05 09:50:24 - INFO - Actualizado conteo para flower: 45
+2024-12-05 09:50:24 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:24 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 45, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:24 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 45, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:25 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 45, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:26 - INFO - Nueva detección - Clase: flower, Persona: Ortiz Montoya Maria Olga, ID: 121
+2024-12-05 09:50:26 - INFO - Actualizado conteo para flower: 46
+2024-12-05 09:50:26 - INFO - Archivo de estado actualizado
+2024-12-05 09:50:26 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 10, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 46, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:50:27 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:28 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:29 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:30 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:31 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:32 - INFO - FPS promedio: 11.96
+2024-12-05 09:50:32 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:33 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:34 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:35 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:37 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:38 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:39 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:40 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:40 - INFO - FPS promedio: 11.95
+2024-12-05 09:50:41 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:42 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:43 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:45 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:46 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:47 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:48 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:49 - INFO - FPS promedio: 11.94
+2024-12-05 09:50:49 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:50 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:51 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:52 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:53 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:54 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:56 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:57 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:57 - INFO - FPS promedio: 11.94
+2024-12-05 09:50:58 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:50:59 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:00 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:03 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:06 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:06 - INFO - FPS promedio: 11.93
+2024-12-05 09:51:07 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 10, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:07 - INFO - Nueva detección - Clase: magnet, Persona: Hernandez Gutierrez Viviana Patricia, ID: 124
+2024-12-05 09:51:07 - INFO - Actualizado conteo para magnet: 11
+2024-12-05 09:51:07 - INFO - Archivo de estado actualizado
+2024-12-05 09:51:07 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 11, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 46, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:51:08 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:09 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:10 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:11 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:12 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:13 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:14 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:15 - INFO - FPS promedio: 11.93
+2024-12-05 09:51:16 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:17 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:18 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:19 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:20 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:21 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:22 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:23 - INFO - FPS promedio: 11.92
+2024-12-05 09:51:23 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:24 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:26 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:27 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:28 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:29 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:30 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:31 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:32 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:33 - INFO - FPS promedio: 11.88
+2024-12-05 09:51:34 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:35 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:36 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:37 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:38 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:39 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:41 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 11, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:41 - INFO - Nueva detección - Clase: magnet, Persona: Hernandez Gutierrez Viviana Patricia, ID: 127
+2024-12-05 09:51:41 - INFO - Actualizado conteo para magnet: 12
+2024-12-05 09:51:41 - INFO - Archivo de estado actualizado
+2024-12-05 09:51:41 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 12, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 46, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:51:42 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:43 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:44 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:44 - INFO - FPS promedio: 11.83
+2024-12-05 09:51:45 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:46 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:47 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:49 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:50 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:51 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:52 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:53 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:54 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:55 - INFO - FPS promedio: 11.77
+2024-12-05 09:51:56 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 2, 'x': 6})
+2024-12-05 09:51:57 - INFO - Nueva detección - Clase: qr, Persona: Ceballos Marin Nidian Yaneth, ID: 128
+2024-12-05 09:51:57 - INFO - Actualizado conteo para qr: 3
+2024-12-05 09:51:57 - INFO - Archivo de estado actualizado
+2024-12-05 09:51:57 - INFO - Verificación de estado: {'sound': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'next': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'qr': {'current_count': 3, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'micro': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'puzzle': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'key': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'magnet': {'current_count': 12, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'women': {'current_count': 2, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'umbrella': {'current_count': 1, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'star': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'flower': {'current_count': 46, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'heart': {'current_count': 0, 'target': 25, 'deficit': 0, 'type': 'aster'}, 'x': {'current_count': 6, 'target': 25, 'deficit': 0, 'type': 'aster'}}
+2024-12-05 09:51:57 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:51:58 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:51:59 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:00 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:05 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:05 - INFO - FPS promedio: 11.73
+2024-12-05 09:52:06 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:07 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:08 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:09 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:10 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:11 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:13 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:14 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:14 - INFO - FPS promedio: 11.72
+2024-12-05 09:52:15 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:16 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:17 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:18 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:19 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {'puzzle': 2, 'umbrella': 1, 'flower': 46, 'magnet': 12, 'women': 2, 'qr': 3, 'x': 6})
+2024-12-05 09:52:19 - INFO - Archivo de detención detectado
+2024-12-05 09:52:19 - INFO - Proceso de detención iniciado
+2024-12-05 09:52:19 - INFO - Finalizando procesamiento de video
+2024-12-05 09:52:20 - INFO - Archivo de señalización eliminado
+2024-12-05 09:52:20 - INFO - Programa finalizado correctamente
+2024-12-05 09:52:20 - WARNING - Error limpiando archivo video_active.txt: [WinError 2] El sistema no puede encontrar el archivo especificado: 'C:\\xampp\\htdocs\\L_Siembra\\tmp\\video_active.txt'
+2024-12-05 09:52:20 - INFO - Limpieza finalizada
+2024-12-05 09:52:20 - WARNING - Error limpiando archivo detection_pid.txt: [WinError 2] El sistema no puede encontrar el archivo especificado: 'C:\\xampp\\htdocs\\L_Siembra\\tmp\\detection_pid.txt'
+2024-12-05 09:52:20 - WARNING - Error limpiando archivo detection_initialized.txt: [WinError 2] El sistema no puede encontrar el archivo especificado: 'C:\\xampp\\htdocs\\L_Siembra\\tmp\\detection_initialized.txt'
+2024-12-05 09:52:20 - WARNING - Error limpiando archivo video_active.txt: [WinError 2] El sistema no puede encontrar el archivo especificado: 'C:\\xampp\\htdocs\\L_Siembra\\tmp\\video_active.txt'
+2024-12-05 09:52:20 - INFO - Limpieza finalizada
+2024-12-05 09:52:21 - INFO - Conexión a base de datos cerrada

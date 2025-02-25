@@ -1,0 +1,24 @@
+Options -MultiViews
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /L_Siembra/frontend/views/
+
+    # Permitir acceso directo a archivos HTML
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^.*\.html$ - [L]
+
+    # Redirigir 404 a detector.html
+    ErrorDocument 404 /L_Siembra/frontend/views/detector.html
+</IfModule>
+
+# Asegurar que los archivos HTML sean servidos correctamente
+AddType text/html .html
+DirectoryIndex detector.html
+
+<Files ~ "\.html$">
+    Order Allow,Deny
+    Allow from all
+    Require all granted
+</Files>

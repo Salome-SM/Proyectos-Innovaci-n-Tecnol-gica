@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial - Sistema de Conteo de Plantas</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">PlantCounter</a>
+            <div class="navbar-links">
+                <a href="index.html" class="navbar-link">Conteo</a>
+                <a href="history.html" class="navbar-link">Historial</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Historial de Conteos</h1>
+            <p>Registro histórico de conteos realizados</p>
+        </div>
+
+        <!-- History Content -->
+        <div class="history-container">
+            <!-- Filters -->
+            <div class="history-filters">
+                <div class="form-group">
+                    <label class="form-label" for="filter_block">Bloque</label>
+                    <input type="number" id="filter_block" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="filter_bed">Cama</label>
+                    <input type="text" id="filter_bed" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="filter_variety">Variedad</label>
+                    <select id="filter_variety" class="form-control">
+                        <option value="">Todas</option>
+                        <option value="white">White</option>
+                        <option value="rosse">Rosse</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="crimson">Crimson</option>
+                        <option value="orleans_white">Orleans White</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="filter_date">Fecha</label>
+                    <input type="date" id="filter_date" class="form-control">
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="table-responsive">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Bloque</th>
+                            <th>Cama</th>
+                            <th>Variedad</th>
+                            <th>Total Plantas</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTable">
+                        <!-- El contenido de la tabla se llenará dinámicamente con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../assets/js/history.js"></script>
+</body>
+</html>

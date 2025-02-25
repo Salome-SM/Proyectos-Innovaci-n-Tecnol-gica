@@ -1,0 +1,212 @@
+2024-12-04 12:15:17 - INFO - Sistema de logging inicializado
+2024-12-04 12:15:17 - INFO - === Iniciando sistema de detección ===
+2024-12-04 12:15:17 - INFO - Directorio creado/verificado: C:\xampp\htdocs\L_Siembra\backend/data/config
+2024-12-04 12:15:17 - INFO - Directorio creado/verificado: C:\xampp\htdocs\L_Siembra\backend/logs
+2024-12-04 12:15:17 - INFO - Directorio creado/verificado: C:\xampp\htdocs\L_Siembra\tmp
+2024-12-04 12:15:17 - INFO - Iniciando carga del modelo YOLO...
+2024-12-04 12:15:17 - INFO - Intentando cargar modelo desde caché...
+2024-12-04 12:15:19 - INFO - Modelo cargado exitosamente desde caché
+2024-12-04 12:15:19 - INFO - Modelo YOLO cargado exitosamente
+2024-12-04 12:15:19 - INFO - Modelo cargado exitosamente
+2024-12-04 12:15:19 - INFO - Iniciando cámara...
+2024-12-04 12:15:19 - INFO - Intentando abrir cámara 1 con backend 700
+2024-12-04 12:15:21 - INFO - Cámara inicializada exitosamente: índice=1, backend=700
+2024-12-04 12:15:21 - INFO - Cámara inicializada exitosamente
+2024-12-04 12:15:21 - INFO - Archivo de inicialización creado: C:\xampp\htdocs\L_Siembra\tmp/detection_initialized.txt
+2024-12-04 12:15:21 - INFO - Configuración cargada correctamente
+2024-12-04 12:15:21 - INFO - Estado de detección inicializado correctamente
+2024-12-04 12:15:21 - INFO - Configurando interfaz gráfica...
+2024-12-04 12:15:21 - INFO - Interfaz gráfica configurada
+2024-12-04 12:15:21 - INFO - Interfaz gráfica configurada
+2024-12-04 12:15:21 - INFO - Iniciando thread de procesamiento de video...
+2024-12-04 12:15:21 - INFO - Iniciando procesamiento de video
+2024-12-04 12:15:21 - INFO - Thread de procesamiento de video iniciado
+2024-12-04 12:15:21 - INFO - Estado inicial de la cámara: True
+2024-12-04 12:15:21 - INFO - Tracking de tiempo iniciado
+2024-12-04 12:15:21 - INFO - Propiedades de la cámara:
+2024-12-04 12:15:21 - INFO - - FPS: 30.00003000003
+2024-12-04 12:15:21 - INFO - - Resolución: 1280.0x720.0
+2024-12-04 12:15:21 - INFO - Inicializando FrameProcessor
+2024-12-04 12:15:21 - INFO - Nombres cargados: 13 registros
+2024-12-04 12:15:21 - INFO - Trackers inicializados correctamente
+2024-12-04 12:15:21 - INFO - Ventana de visualización creada correctamente
+2024-12-04 12:15:22 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:23 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:24 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:25 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:26 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:27 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:28 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:29 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:30 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:31 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:32 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:33 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:35 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:35 - INFO - FPS promedio: 7.28
+2024-12-04 12:15:36 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:37 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:38 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:39 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:40 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:41 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:42 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:43 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:44 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:45 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:46 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:47 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:48 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:48 - INFO - FPS promedio: 7.38
+2024-12-04 12:15:49 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:50 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:51 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:52 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:53 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:54 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:55 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:56 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:57 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:15:58 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:00 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:02 - INFO - FPS promedio: 7.41
+2024-12-04 12:16:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:03 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:05 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:06 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:07 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:08 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:09 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:10 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:11 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:12 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:13 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:14 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:15 - INFO - FPS promedio: 7.43
+2024-12-04 12:16:15 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:16 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:17 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:18 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:19 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:20 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:21 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:22 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:24 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:25 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:26 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:27 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:28 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:28 - INFO - FPS promedio: 7.44
+2024-12-04 12:16:29 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:30 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:31 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:32 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:33 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:34 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:35 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:36 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:37 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:38 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:39 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:40 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:41 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:42 - INFO - FPS promedio: 7.45
+2024-12-04 12:16:42 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:43 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:44 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:45 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:46 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:47 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:49 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:50 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:51 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:52 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:53 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:54 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:55 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:55 - INFO - FPS promedio: 7.45
+2024-12-04 12:16:56 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:57 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:58 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:16:59 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:00 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:03 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:05 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:06 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:07 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:08 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:08 - INFO - FPS promedio: 7.45
+2024-12-04 12:17:09 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:11 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:12 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:13 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:14 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:15 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:16 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:17 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:18 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:19 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:20 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:21 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:22 - INFO - FPS promedio: 7.46
+2024-12-04 12:17:22 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:23 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:24 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:25 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:26 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:27 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:28 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:29 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:30 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:31 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:32 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:33 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:34 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:35 - INFO - FPS promedio: 7.46
+2024-12-04 12:17:36 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:37 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:38 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:39 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:40 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:41 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:42 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:43 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:44 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:45 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:46 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:47 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:48 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:48 - INFO - FPS promedio: 7.46
+2024-12-04 12:17:49 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:50 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:51 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:52 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:53 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:54 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:55 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:56 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:57 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:17:59 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:18:00 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:18:01 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:18:02 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:18:02 - INFO - FPS promedio: 7.46
+2024-12-04 12:18:03 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:18:04 - INFO - Actualizando dashboard con conteos: defaultdict(<class 'int'>, {})
+2024-12-04 12:18:04 - INFO - Archivo de detención detectado
+2024-12-04 12:18:04 - INFO - Proceso de detención iniciado
+2024-12-04 12:18:04 - INFO - Finalizando procesamiento de video
+2024-12-04 12:18:04 - INFO - Archivo de señalización eliminado
+2024-12-04 12:18:05 - INFO - Programa finalizado correctamente
+2024-12-04 12:18:05 - WARNING - Error limpiando archivo video_active.txt: [WinError 2] El sistema no puede encontrar el archivo especificado: 'C:\\xampp\\htdocs\\L_Siembra\\tmp\\video_active.txt'
+2024-12-04 12:18:05 - INFO - Limpieza finalizada
+2024-12-04 12:18:05 - WARNING - Error limpiando archivo detection_pid.txt: [WinError 2] El sistema no puede encontrar el archivo especificado: 'C:\\xampp\\htdocs\\L_Siembra\\tmp\\detection_pid.txt'
+2024-12-04 12:18:05 - WARNING - Error limpiando archivo detection_initialized.txt: [WinError 2] El sistema no puede encontrar el archivo especificado: 'C:\\xampp\\htdocs\\L_Siembra\\tmp\\detection_initialized.txt'
+2024-12-04 12:18:05 - WARNING - Error limpiando archivo video_active.txt: [WinError 2] El sistema no puede encontrar el archivo especificado: 'C:\\xampp\\htdocs\\L_Siembra\\tmp\\video_active.txt'
+2024-12-04 12:18:05 - INFO - Limpieza finalizada
+2024-12-04 12:18:05 - INFO - Conexión a base de datos cerrada

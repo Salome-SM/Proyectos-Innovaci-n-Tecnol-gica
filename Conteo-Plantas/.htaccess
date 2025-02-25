@@ -1,0 +1,32 @@
+RewriteEngine On
+RewriteBase /plant_counter/
+
+# Permitir acceso a archivos y directorios existentes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Configuración de PHP
+php_value upload_max_filesize 500M
+php_value memory_limit 512M
+php_value post_max_size 500M
+php_value max_execution_time 1800
+php_value max_input_time 1800
+
+# Configuración de tipos MIME para videos
+AddType video/mp4 .mp4
+AddType video/quicktime .mov
+
+# Configuración para servir videos
+<FilesMatch "\.(mp4|mov)$">
+    Header set Content-Disposition "inline"
+    Header set Content-Type "video/mp4"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Accept-Ranges "bytes"
+</FilesMatch>
+
+# Permitir acceso a endpoints JSON
+<Files "upload.php">
+    Header set Access-Control-Allow-Origin "*"
+    Header set Content-Type application/json
+</Files>

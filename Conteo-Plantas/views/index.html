@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Conteo de Plantas</title>
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../assets/css/base/reset.css">
+    <link rel="stylesheet" href="../assets/css/base/typography.css">
+    <link rel="stylesheet" href="../assets/css/components/buttons.css">
+    <link rel="stylesheet" href="../assets/css/components/form.css">
+    <link rel="stylesheet" href="../assets/css/components/progress.css">
+    <link rel="stylesheet" href="../assets/css/layout/grid.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">PlantCounter</a>
+            <div class="navbar-links">
+                <a href="index.html" class="navbar-link">Conteo</a>
+                <a href="history.html" class="navbar-link">Historial</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Sistema de Conteo de Plantas</h1>
+            <p>Procesamiento y análisis automatizado</p>
+        </div>
+
+        <!-- Mensaje de Error -->
+        <div id="error-message" class="error-message" style="display: none;"></div>
+
+        <div class="main-content">
+            <!-- Columna Izquierda: Formulario -->
+            <div class="form">
+                <form id="plantCountForm">
+                    <div class="form-group">
+                        <label class="form-label" for="block_number">
+                            <span>Número de Bloque</span>
+                        </label>
+                        <input type="number" class="form-control" id="block_number" name="block_number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="bed_number">
+                            <span>Número de Cama</span>
+                        </label>
+                        <input type="text" class="form-control" id="bed_number" name="bed_number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="year_week">
+                            <span>Año y Semana (YYWW)</span>
+                        </label>
+                        <input type="text" class="form-control" id="year_week" name="year_week" pattern="[0-9]{4}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="count_date">
+                            <span>Fecha de Conteo</span>
+                        </label>
+                        <input type="date" class="form-control" id="count_date" name="count_date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="variety">
+                            <span>Variedad</span>
+                        </label>
+                        <select class="form-control" id="variety" name="variety" required>
+                            <option value="">Seleccionar variedad</option>
+                            <option value="white">White</option>
+                            <option value="rosse">Rosse</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="crimson">Crimson</option>
+                            <option value="orleans_white">Orleans White</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="video_file">
+                            <span>Video del Cultivo</span>
+                        </label>
+                        <input type="file" class="form-control" id="video_file" name="video_file" accept=".mp4,.mov" required>
+                    </div>
+
+                    <!-- Progress Section -->
+                    <div class="progress-section" style="display: none;">
+                        <div class="progress-label">
+                            <span>Subiendo Video</span>
+                            <span id="uploadProgress">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" id="uploadProgressBar" style="width: 0%"></div>
+                        </div>
+
+                        <div class="progress-label">
+                            <span>Procesando Video</span>
+                            <span id="processProgress">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" id="processProgressBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">
+                        <span>Iniciar Procesamiento</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Columna Derecha: Resultados -->
+            <div class="results-container" id="results">
+                <h3 class="results-title">Resultados del Procesamiento</h3>
+                <div class="live-results">
+                    <div class="result-card">
+                        <div class="result-label">Conteo Final de Plantas</div>
+                        <div class="plant-count" id="plantCount">-</div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-label">Estado del Procesamiento</div>
+                        <div id="processingStatus">En espera de video...</div>
+                    </div>
+
+                    <div class="download-section">
+                        <a href="#" class="btn-download" id="downloadVideo" style="display: none;">
+                            <span>Descargar Video Procesado</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>
